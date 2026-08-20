@@ -19,6 +19,20 @@ Extensão para Google Chrome que aplica um tema escuro aos sistemas instituciona
 
 O tema de cada sistema pode ser ativado ou desativado pelo painel da extensão.
 
+## Capturas de tela
+
+### GLPI
+
+![Tela de login do GLPI com o tema escuro](docs/screenshots/glpi-login.png)
+
+### SIGRH
+
+![Tela de login do SIGRH com o tema escuro](docs/screenshots/sigrh-login.png)
+
+### Polare — área pública
+
+![Área pública do Polare com o tema escuro](docs/screenshots/polare-publico.png)
+
 ## Privacidade
 
 A extensão apenas modifica a apresentação visual das páginas compatíveis. Ela não coleta nem transmite dados pessoais ou de navegação. As preferências de ativação são armazenadas por meio do `chrome.storage.sync`.
