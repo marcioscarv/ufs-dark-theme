@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    :root {
+      --ufs-blue: #003366;
+      --ufs-blue-light: #004d99;
+      --bg-dark: #0d1117;
+      --accent: #3fb950;
+    }
+
+    body {
+      width: 280px;
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-dark);
+      color: white;
+      overflow: hidden;
+    }
+
+    /* Cabeçalho com Degradê UFS */
+    .header {
+      background: linear-gradient(135deg,
+          var(--ufs-blue) 0%,
+          var(--ufs-blue-light) 100%);
+      padding: 20px 15px;
+      text-align: center;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .header h2 {
+      margin: 0;
+      font-size: 18px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .header p {
+      margin: 5px 0 0;
+      font-size: 11px;
+      opacity: 0.8;
+    }
+
+    /* Lista de Opções */
+    .content {
+      padding: 15px;
+    }
+
+    .site-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 10px;
+      margin-bottom: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      transition: background 0.3s;
+    }
+
+    .site-row:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .site-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .site-name {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .site-url {
+      font-size: 10px;
+      color: #8b949e;
+    }
+
+    /* Switch Moderno */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 42px;
+      height: 22px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #30363d;
+      transition: 0.3s;
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.3s;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    input:checked+.slider {
+      background-color: var(--accent);
+    }
+
+    input:focus+.slider {
+      box-shadow: 0 0 1px var(--accent);
+    }
+
+    input:checked+.slider:before {
+      transform: translateX(20px);
+    }
+
+    /* Rodapé */
+    .footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 9px;
+      color: #484f58;
+      border-top: 1px solid #21262d;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h2>UFS Dark Theme</h2>
+    <p>Sistemas Institucionais</p>
+  </div>
+
+  <div class="content">
+    <div class="site-row">
+      <div class="site-info">
+        <span class="site-name">GLPI</span>
+        <span class="site-url">glpi.ufs.br</span>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="glpi_toggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="site-row">
+      <div class="site-info">
+        <span class="site-name">Portal de Autenticação</span>
+        <span class="site-url">sso.auth.ufs.br</span>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="sso_toggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="site-row">
+      <div class="site-info">
+        <span class="site-name">Polare</span>
+        <span class="site-url">polare.ufs.br</span>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="polare_toggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="site-row">
+      <div class="site-info">
+        <span class="site-name">SIGRH (beta)</span>
+        <span class="site-url">sigrh.ufs.br</span>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="sigrh_toggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+
+  <div class="footer">Desenvolvido pelo NTISER/CAMPUSSER.</div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>

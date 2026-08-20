@@ -1,0 +1,1585 @@
+:root {
+  color-scheme: dark;
+  --sigrh-bg: #0d1219;
+  --sigrh-surface: #151c26;
+  --sigrh-surface-raised: #1c2633;
+  --sigrh-surface-soft: #233044;
+  --sigrh-border: #354863;
+  --sigrh-brand: #304f86;
+  --sigrh-brand-hover: #3c63a2;
+  --sigrh-text: #e7edf6;
+  --sigrh-muted: #afbdd0;
+  --sigrh-link: #82b2ff;
+  --sigrh-focus: #78a9ff;
+}
+
+html,
+body {
+  min-height: 100% !important;
+  background: var(--sigrh-bg) !important;
+  color: var(--sigrh-text) !important;
+}
+
+body {
+  overflow: auto !important;
+  background-image: linear-gradient(135deg, #0d1219 0%, #111a26 100%) !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+a {
+  color: var(--sigrh-link) !important;
+}
+
+a:hover,
+a:focus {
+  color: #b2d0ff !important;
+}
+
+#container {
+  width: min(1000px, calc(100% - 32px)) !important;
+  height: auto !important;
+  min-height: 540px !important;
+  margin: 24px auto 165px !important;
+  overflow: hidden !important;
+  background: var(--sigrh-surface) !important;
+  border: 1px solid var(--sigrh-border) !important;
+  border-radius: 7px !important;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.38) !important;
+}
+
+#cabecalho {
+  background-color: var(--sigrh-surface-raised) !important;
+  border-bottom: 1px solid var(--sigrh-border) !important;
+}
+
+#info-sistema {
+  box-sizing: border-box !important;
+  height: auto !important;
+  min-height: 30px !important;
+  padding: 7px 13px !important;
+  background-color: var(--sigrh-brand) !important;
+  background-image: none !important;
+  color: #fff !important;
+  font-size: 13px !important;
+  line-height: 16px !important;
+}
+
+#info-sistema a,
+#info-sistema span,
+#info-sistema strong {
+  color: #fff !important;
+}
+
+#painel-usuario {
+  box-sizing: border-box !important;
+  height: auto !important;
+  min-height: 40px !important;
+  padding: 7px 12px !important;
+  background: var(--sigrh-surface-soft) !important;
+  border-bottom: 1px solid var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+#painel-usuario * {
+  color: inherit !important;
+}
+
+#conteudo {
+  box-sizing: border-box !important;
+  min-height: 385px !important;
+  padding: 20px !important;
+  background: var(--sigrh-surface) !important;
+  color: var(--sigrh-text) !important;
+}
+
+#conteudo table,
+#conteudo tbody,
+#conteudo tr,
+#conteudo td,
+#conteudo th {
+  color: var(--sigrh-text) !important;
+}
+
+#conteudo td.painel {
+  box-sizing: border-box !important;
+  padding: 9px 6px !important;
+  background: var(--sigrh-surface-raised) !important;
+  border: 1px solid var(--sigrh-border) !important;
+  color: var(--sigrh-muted) !important;
+  vertical-align: middle !important;
+}
+
+#conteudo td.painel:hover {
+  background: var(--sigrh-surface-soft) !important;
+}
+
+#conteudo td.painel.sistemaAtual,
+#conteudo td.sistemaAtual {
+  background: #29436f !important;
+  color: #fff !important;
+  box-shadow: inset 0 -3px 0 var(--sigrh-focus) !important;
+}
+
+#conteudo td.painel a,
+#conteudo td.painel span,
+#conteudo td.painel strong {
+  color: inherit !important;
+}
+
+.logon {
+  box-sizing: border-box !important;
+  width: min(470px, 100%) !important;
+  margin: 24px auto !important;
+  overflow: hidden !important;
+  background: var(--sigrh-surface-raised) !important;
+  border: 1px solid var(--sigrh-border) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.24) !important;
+}
+
+.logon table {
+  width: 100% !important;
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
+.logon td,
+.logon th {
+  padding: 5px 8px !important;
+  background: transparent !important;
+  color: var(--sigrh-text) !important;
+  vertical-align: middle !important;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  box-sizing: border-box !important;
+  min-height: 30px !important;
+  padding: 5px 8px !important;
+  background: #0f1620 !important;
+  border: 1px solid var(--sigrh-border) !important;
+  border-radius: 4px !important;
+  color: var(--sigrh-text) !important;
+}
+
+.logon input[type="text"],
+.logon input[type="password"] {
+  width: min(240px, 100%) !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--sigrh-focus) !important;
+  outline: 2px solid rgba(120, 169, 255, 0.22) !important;
+  outline-offset: 1px !important;
+}
+
+input[type="button"],
+input[type="submit"],
+button,
+.botao {
+  box-sizing: border-box !important;
+  min-height: 30px !important;
+  padding: 5px 14px !important;
+  background: var(--sigrh-brand) !important;
+  border: 1px solid #5577ad !important;
+  border-radius: 4px !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+button:hover,
+.botao:hover {
+  background: var(--sigrh-brand-hover) !important;
+}
+
+#rodape {
+  box-sizing: border-box !important;
+  height: auto !important;
+  min-height: 30px !important;
+  padding: 7px 12px !important;
+  background: #1c315c !important;
+  border-top: 2px solid #5377b1 !important;
+  color: #dce6f5 !important;
+  line-height: 15px !important;
+}
+
+#rodape * {
+  color: inherit !important;
+}
+
+.box-cookies {
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 24px !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 112px !important;
+  padding: 18px max(24px, calc((100% - 1000px) / 2)) !important;
+  background: rgba(21, 28, 38, 0.98) !important;
+  border-top: 1px solid var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+  box-shadow: 0 -12px 32px rgba(0, 0, 0, 0.3) !important;
+}
+
+.texto-cookies {
+  flex: 1 1 auto !important;
+  color: var(--sigrh-text) !important;
+}
+
+.titulo-cookies {
+  margin-bottom: 5px !important;
+  color: #fff !important;
+  font-size: 15px !important;
+}
+
+.msg-cookies {
+  color: var(--sigrh-muted) !important;
+  line-height: 1.45 !important;
+}
+
+.btn-cookies {
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex: 0 0 160px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 160px !important;
+  height: 40px !important;
+  padding: 0 16px !important;
+  background: var(--sigrh-brand) !important;
+  border: 1px solid #5577ad !important;
+  border-radius: 5px !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+}
+
+.btn-cookies:hover {
+  background: var(--sigrh-brand-hover) !important;
+}
+
+.fundo-aviso-cookies.ativo,
+#fundo-aviso-cookies.ativo {
+  background: #000 !important;
+  opacity: 0.62 !important;
+}
+
+.panel-container,
+.module.overlay.panel,
+.rich-panel,
+.rich-modalpanel {
+  background: var(--sigrh-surface-raised) !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.48) !important;
+}
+
+.module.overlay.panel .hd,
+.rich-panel-header,
+.rich-mpnl-header {
+  background: var(--sigrh-brand) !important;
+  border-color: #5577ad !important;
+  color: #fff !important;
+}
+
+.module.overlay.panel .bd,
+.module.overlay.panel .ft,
+.rich-panel-body,
+.rich-mpnl-body {
+  background: var(--sigrh-surface-raised) !important;
+  color: var(--sigrh-text) !important;
+}
+
+.panel-container .underlay {
+  background: #05080d !important;
+  opacity: 0.5 !important;
+}
+
+#aviso_na_tela {
+  background: #000 !important;
+  opacity: 0.68 !important;
+}
+
+#loading {
+  background: var(--sigrh-surface-raised) !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.42) !important;
+}
+
+/* Correções pontuais da tela de acesso, sem alterar seu layout original. */
+#conteudo > div[style*="background: #EFF3FA"] {
+  background: var(--sigrh-surface-raised) !important;
+  box-shadow: inset 0 0 0 1px var(--sigrh-border) !important;
+  color: var(--sigrh-muted) !important;
+}
+
+#conteudo > div[style*="background: #EFF3FA"] > p {
+  color: var(--sigrh-muted) !important;
+}
+
+#conteudo > div[style*="background: #EFF3FA"] > p:first-child {
+  color: #ff858c !important;
+}
+
+#painel-erros {
+  background: #251b1e !important;
+  box-shadow: inset 0 0 0 1px #6b3f48 !important;
+}
+
+#painel-erros-thread {
+  background: #251b1e !important;
+  border-color: #6b3f48 !important;
+  color: #ff8e96 !important;
+}
+
+#painel-erros .erros,
+#painel-erros .erros li {
+  color: #ff8e96 !important;
+}
+
+.logon > h3 {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  background: var(--sigrh-brand) !important;
+  background-image: none !important;
+  color: #fff !important;
+}
+
+/* Área autenticada: mantém o layout legado e corrige apenas o tema. */
+#menu-usuario {
+  background-color: var(--sigrh-surface-soft) !important;
+  color: var(--sigrh-text) !important;
+}
+
+#menu-usuario li,
+#menu-usuario span,
+#menu-usuario font {
+  color: var(--sigrh-text) !important;
+}
+
+#menu-usuario li > a {
+  background-color: #29374a !important;
+  color: var(--sigrh-text) !important;
+}
+
+#menu-usuario li > a:hover,
+#menu-usuario li > a:focus {
+  background-color: #354b6d !important;
+  color: #fff !important;
+}
+
+/* O menu autenticado tem duas linhas; contém os floats sem alterar sua largura. */
+#cabecalho {
+  height: auto !important;
+  min-height: 80px !important;
+}
+
+#painel-usuario {
+  height: 46px !important;
+  min-height: 46px !important;
+  padding: 0 12px !important;
+}
+
+#menu-usuario {
+  box-sizing: border-box !important;
+  height: 46px !important;
+  padding: 2px 0 !important;
+}
+
+#menu-usuario ul {
+  box-sizing: border-box !important;
+  height: 42px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#menu-usuario li,
+#menu-usuario li > span,
+#menu-usuario li > a,
+#menu-usuario li > span > a {
+  box-sizing: border-box !important;
+  height: 17px !important;
+}
+
+#menu-usuario li > span,
+#menu-usuario li > a,
+#menu-usuario li > span > a {
+  display: block !important;
+  width: 115px !important;
+}
+
+#menu-usuario li > a,
+#menu-usuario li > span > a {
+  padding: 0 4px 0 25px !important;
+  background-position: 6px center !important;
+  line-height: 17px !important;
+}
+
+#menu-dropdown,
+.ThemeOfficeMenu,
+.ThemeOfficeSubMenu,
+.ThemeOfficeSubMenuTable {
+  background-color: var(--sigrh-surface-raised) !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+.ThemeOfficeMainItem,
+.ThemeOfficeMainFolderLeft,
+.ThemeOfficeMainFolderText,
+.ThemeOfficeMainFolderRight {
+  background-color: var(--sigrh-surface-raised) !important;
+  color: var(--sigrh-text) !important;
+}
+
+.ThemeOfficeMenuItemLeft,
+.ThemeOfficeMenuItemText,
+.ThemeOfficeMenuItemRight,
+.ThemeOfficeMenuFolderLeft,
+.ThemeOfficeMenuFolderText,
+.ThemeOfficeMenuFolderRight {
+  background-color: #18212c !important;
+  color: var(--sigrh-text) !important;
+}
+
+.ThemeOfficeMainItem:hover,
+.ThemeOfficeMainItemHover,
+.ThemeOfficeMainFolder:hover,
+.ThemeOfficeMainFolderHover,
+.ThemeOfficeMenuItem:hover,
+.ThemeOfficeMenuItemHover,
+.ThemeOfficeMenuFolder:hover,
+.ThemeOfficeMenuFolderHover,
+.ThemeOfficeMenuItem:hover > td,
+.ThemeOfficeMenuFolder:hover > td {
+  background-color: #2d4263 !important;
+  color: #fff !important;
+}
+
+#title,
+#conteudo > h2,
+.simple-panel > h2,
+.simple-panel > h3,
+#menu_principal h2,
+.tituloTabela,
+.rich-panel-header,
+.rich-mpnl-header {
+  background-color: var(--sigrh-brand) !important;
+  background-image: none !important;
+  border-color: #5577ad !important;
+  color: #fff !important;
+}
+
+#perfil-servidor,
+.pessoal-servidor,
+#agenda-servidor,
+#noticias-portal,
+.simple-panel,
+.formulario,
+.listagem,
+.tabela,
+fieldset {
+  background-color: var(--sigrh-surface-raised) !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+#perfil-servidor *,
+.pessoal-servidor *,
+#agenda-servidor *,
+#noticias-portal *,
+.simple-panel * {
+  border-color: var(--sigrh-border) !important;
+}
+
+#perfil-servidor h2,
+#perfil-servidor h3,
+#agenda-servidor h2,
+#agenda-servidor h3,
+#noticias-portal h2,
+#noticias-portal h3 {
+  background-color: #243b63 !important;
+  background-image: none !important;
+  color: #fff !important;
+}
+
+#fscroller,
+#controls,
+#noticias-portal p,
+#noticias-portal span,
+#agenda-servidor p,
+#agenda-servidor span {
+  color: var(--sigrh-muted) !important;
+}
+
+.formulario th,
+.formulario td,
+.listagem th,
+.listagem td,
+.tabela th,
+.tabela td {
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+.formulario th.rotulo,
+.formulario .rotulo,
+.listagem th,
+.tabela th,
+.listagem thead,
+.tabela thead {
+  background-color: var(--sigrh-surface-soft) !important;
+  color: #dce7f7 !important;
+}
+
+.linhaPar,
+.linha1,
+.even,
+.rich-table-row:nth-child(even) {
+  background-color: #17202b !important;
+}
+
+.linhaImpar,
+.linha2,
+.odd,
+.rich-table-row:nth-child(odd) {
+  background-color: #1d2836 !important;
+}
+
+.listagem tbody tr:hover,
+.tabela tbody tr:hover,
+.rich-table-row:hover {
+  background-color: #283a53 !important;
+}
+
+.descricaoOperacao,
+.descricaoOperacao .passosOperacao,
+.aviso,
+.warning,
+.mensagem-aviso {
+  background-color: #292718 !important;
+  border-color: #665f34 !important;
+  color: #eee3a9 !important;
+}
+
+/* Aviso global de manutenção exibido dentro do painel de mensagens. */
+#painel-erros:has(> ul.warning) {
+  background-color: #292718 !important;
+  border: 1px solid #665f34 !important;
+  box-shadow: inset 4px 0 0 #d5ad45 !important;
+}
+
+#painel-erros > ul.warning,
+#painel-erros > ul.warning > li {
+  background-color: transparent !important;
+  color: #f3e7aa !important;
+}
+
+#painel-erros > ul.warning {
+  margin: 0 !important;
+  padding: 12px 16px 12px 78px !important;
+  border: 0 !important;
+  line-height: 1.45 !important;
+}
+
+#painel-erros > ul.warning > li {
+  padding: 0 !important;
+}
+
+.sucesso,
+.success,
+.mensagem-sucesso {
+  background-color: #162a22 !important;
+  border-color: #356c54 !important;
+  color: #9de1bb !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #8493a8 !important;
+  opacity: 1 !important;
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled,
+input[readonly],
+textarea[readonly] {
+  background-color: #202936 !important;
+  border-color: #39475a !important;
+  color: #96a4b7 !important;
+  opacity: 1 !important;
+}
+
+select option,
+select optgroup {
+  background: #111923 !important;
+  color: var(--sigrh-text) !important;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--sigrh-focus) !important;
+}
+
+input[type="file"] {
+  color: var(--sigrh-muted) !important;
+}
+
+input[type="file"]::file-selector-button {
+  background: var(--sigrh-brand) !important;
+  border: 1px solid #5577ad !important;
+  color: #fff !important;
+}
+
+/* Calendários JSCalendar e RichFaces. */
+[class*="jscalendar-DB"],
+.rich-calendar-exterior,
+.rich-calendar-header,
+.rich-calendar-footer,
+.rich-calendar-tool,
+.rich-calendar-month,
+.rich-calendar-days,
+.rich-calendar-cell,
+.rich-calendar-holly,
+.rich-calendar-boundary-dates {
+  background-color: var(--sigrh-surface-raised) !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+.rich-calendar-cell:hover,
+.rich-calendar-select,
+.rich-calendar-hover {
+  background-color: var(--sigrh-brand-hover) !important;
+  color: #fff !important;
+}
+
+/* Tabelas, abas, sugestões e caixas RichFaces. */
+.rich-table,
+.rich-table-cell,
+.rich-table-header,
+.rich-table-headercell,
+.rich-table-subheader,
+.rich-table-subheadercell,
+.rich-datascr,
+.rich-dtascroller-table,
+.rich-sb-common-container,
+.rich-sb-ext-decor-1,
+.rich-sb-ext-decor-2,
+.rich-sb-ext-decor-3,
+.rich-sb-cell-padding,
+.rich-combobox-list-decoration,
+.rich-combobox-list-position,
+.rich-combobox-item,
+.rich-tabpanel-content,
+.rich-tab-inactive,
+.rich-tab-active,
+.rich-tab-disabled {
+  background-color: var(--sigrh-surface-raised) !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+.rich-sb-cell-selected,
+.rich-combobox-item-selected,
+.rich-tab-active,
+.rich-datascr-act {
+  background-color: var(--sigrh-brand) !important;
+  color: #fff !important;
+}
+
+/* Janela antiga de seleção de módulos. */
+.ydlg-mask {
+  background: #05080d !important;
+  opacity: 0.7 !important;
+}
+
+.ydlg-dlg-body,
+.ydlg-bd,
+#menu_principal,
+#menu_principal #modulos,
+#menu_principal #portais {
+  background-color: var(--sigrh-surface-raised) !important;
+  background-image: none !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+.ydlg-hd,
+.ydlg-hd-left,
+.ydlg-hd-right {
+  background-color: var(--sigrh-brand) !important;
+  background-image: none !important;
+  color: #fff !important;
+}
+
+#menu_principal li.off,
+#menu_principal li.on {
+  background-color: #202b39 !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+#menu_principal li.on,
+#menu_principal li:hover {
+  background-color: #2d4263 !important;
+}
+
+.tooltip {
+  background-color: #0f1620 !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+/* Cobertura obtida pela auditoria integral de ufrn.css, sigrh_base.css,
+   ThemeOffice, RichFaces, AjaxTags, YUI e dos blocos <style> da página. */
+#painel-usuario #menu-usuario li a,
+#menu-usuario a,
+.ThemeOfficeMenuItem,
+.ThemeOfficeMenuItem .ThemeOfficeMenuFolderLeft,
+.ThemeOfficeMenuItem .ThemeOfficeMenuItemLeft {
+  background-color: #29374a !important;
+  color: var(--sigrh-text) !important;
+}
+
+#painel-usuario #menu-usuario li a:hover,
+#painel-usuario #menu-usuario li a:focus,
+#menu ul li a:hover {
+  background-color: #354b6d !important;
+  color: #fff !important;
+}
+
+#conteudo h2,
+h2#title,
+table.formulario caption,
+table.listagem caption,
+table.visualizacao caption,
+h3.tituloTabela,
+div.formulario p.caption,
+div.listagem p.caption,
+div.visualizacao p.caption,
+.portletTitle {
+  background-color: var(--sigrh-brand) !important;
+  background-image: none !important;
+  border-color: #5577ad !important;
+  color: #fff !important;
+}
+
+table thead,
+table tr.linhaCinza,
+thead.listagem,
+table.formulario th,
+table.subFormulario th,
+table.listagem th,
+table.subListagem th,
+table.visualizacao th,
+#cronograma tbody th,
+tr.grupo td {
+  background-color: var(--sigrh-surface-soft) !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+table.legenda,
+table.formulario,
+table.subFormulario,
+table.listagem,
+table.subListagem,
+table.visualizacao,
+div.formulario,
+div.subFormulario,
+.msgPane,
+.caixaBranca,
+.caixaCinza,
+.caixaCinzaMedio,
+.infoAltRem,
+div.aba,
+.tabContent,
+#container-popup,
+#menu_principal .popup {
+  background-color: var(--sigrh-surface-raised) !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+table.formulario tbody,
+table.subFormulario tbody,
+table.listagem tbody,
+table.subListagem tbody,
+table.visualizacao tbody,
+tbody.listagem,
+td.subFormularioItem,
+span.subFormularioItem,
+table.listagem td.colPar,
+table.listagem td.colImpar,
+td.azulClaro {
+  background-color: #18212c !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+table.subFormulario caption.subTabela,
+table caption.subTabela,
+table.subFormulario caption,
+caption.subFormulario,
+td.subFormulario,
+table.formulario table caption,
+table.listagem tr.titulo,
+table.listagem caption.subListagem,
+td.subListagem,
+table.listagem table caption,
+div.subFormulario p.caption,
+p.subFormulario,
+div.formulario div p.caption,
+.infoAltRem h4 {
+  background-color: var(--sigrh-surface-soft) !important;
+  background-image: none !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+table.subFormulario tfoot,
+table.subFormulario tfoot td,
+tfoot.listagem,
+table.visualizacao tfoot tr {
+  background-color: #202d3c !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+ul.legenda,
+ul.listaOpcoes,
+#operacoes-subsistema ul ul li,
+.btnCrudListar {
+  background-color: var(--sigrh-surface-raised) !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+div.aba-botoes li.botao-ativo,
+div.aba-botoes li.botao-on,
+div.aba-botoes li.botao-off,
+.tabPanel a:link,
+.tabPanel a:visited,
+.tabPanel a:link.ajaxCurrentTab,
+.tabPanel a:visited.ajaxCurrentTab {
+  background: var(--sigrh-surface-soft) !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+div.aba-botoes li.botao-ativo,
+div.aba-botoes li.botao-on,
+.tabPanel a:link.ajaxCurrentTab,
+.tabPanel a:visited.ajaxCurrentTab {
+  background: var(--sigrh-brand) !important;
+  color: #fff !important;
+}
+
+.popUp,
+#modelDescription,
+.tt {
+  background-color: #302d1b !important;
+  border-color: #6b6337 !important;
+  color: #f0e6ab !important;
+}
+
+.autocomplete,
+.olfg {
+  background-color: var(--sigrh-surface-raised) !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+.autocomplete li.selected,
+.autocomplete li:hover {
+  background-color: var(--sigrh-brand) !important;
+  color: #fff !important;
+}
+
+/* Utilitários de cor do RichFaces usados por componentes carregados sob demanda. */
+.rich-field,
+.rich-field-edit,
+.rich-box-bgcolor-header,
+.rich-box-bgcolor-general,
+.rich-box-bgcolor-additional,
+.rich-box-bgcolor-tab,
+.rich-box-bgcolor-trim,
+.rich-box-bgcolor-table,
+.rich-box-bgcolor-table-subfooter,
+.rich-box-bgcolor-editor,
+.rich-box-bgcolor-edit,
+.rich-container textarea,
+.rich-textarea,
+.rich-textarea-textarea,
+.rich-input-text,
+.rich-input-password,
+.rich-select {
+  background-color: var(--sigrh-surface-raised) !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+.rich-field-edit,
+.rich-box-bgcolor-edit {
+  background-color: #292718 !important;
+}
+
+.rich-box-bgcolor-tip {
+  background-color: #302d1b !important;
+  color: #f0e6ab !important;
+}
+
+.rich-button,
+.rich-button-disabled,
+.rich-button-over,
+.rich-button-press,
+.rich-container button,
+.rich-button-button,
+.rich-button-reset,
+.rich-button-submit,
+.rich-input-reset,
+.rich-input-submit,
+.rich-input-button {
+  background-color: var(--sigrh-brand) !important;
+  border-color: #5577ad !important;
+  color: #fff !important;
+}
+
+/* Calendário legado declarado em sigrh_base.css. */
+.calendar,
+.calendar table,
+.calendar thead .title,
+.calendar thead .daynames,
+.calendar table .wn,
+.calendar tbody .rowhilite td,
+.calendar tbody .rowhilite td.wn,
+.calendar tbody td.hilite,
+.calendar tbody td.active,
+.calendar tbody td.selected,
+.calendar tfoot .ttip,
+.calendar .combo,
+.calendar .combo .active,
+.calendar td.time,
+.calendar td.time .hour,
+.calendar td.time .minute,
+.calendar td.time .ampm {
+  background-color: var(--sigrh-surface-raised) !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+.calendar thead .title,
+.calendar tbody td.selected,
+.calendar tbody td.active,
+.calendar .combo .active {
+  background-color: var(--sigrh-brand) !important;
+  color: #fff !important;
+}
+
+.calendar thead .daynames,
+.calendar table .wn,
+.calendar tbody .rowhilite td,
+.calendar tbody td.hilite {
+  background-color: var(--sigrh-surface-soft) !important;
+}
+
+/* Variações restantes dos diálogos YUI. */
+.ydlg-proxy,
+.ydlg .yui-ext-tabbody,
+.ytheme-gray .ydlg-proxy,
+.ytheme-gray .ydlg .ydlg-dlg-body,
+.yresizable-handle,
+.yresizable-overlay,
+.panel-container.matte,
+.panel,
+.button-group button {
+  background-color: var(--sigrh-surface-raised) !important;
+  background-image: none !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+/* Remove os degradês GIF decorativos da biblioteca YUI antiga. Os ícones de
+   fechar, abas e redimensionamento permanecem intactos. */
+.ydlg .ydlg-dlg-body,
+.ydlg-proxy,
+.ytheme-gray .ydlg-proxy,
+.ytheme-gray .ydlg-proxy .tabset,
+.ydlg .ydlg-hd,
+.ydlg .ydlg-hd-left,
+.ydlg .ydlg-hd-right,
+.ytheme-gray .ydlg .ydlg-hd,
+.ytheme-gray .ydlg .ydlg-hd-left,
+.ytheme-gray .ydlg .ydlg-hd-right {
+  background-image: none !important;
+}
+
+.button-group button:hover,
+.button-group button:focus {
+  background-color: var(--sigrh-brand-hover) !important;
+  color: #fff !important;
+}
+
+.divisorHead,
+.divisor {
+  border-color: var(--sigrh-border) !important;
+}
+
+/* Segunda passagem: cores claras identificadas por luminância perceptiva. */
+table.formulario tfoot tr,
+table.formulario tfoot tr td,
+tfoot.formulario tr td,
+div.formulario p.foot p.linha span.coluna,
+table.listagem tfoot,
+table.listagem tfoot td,
+table.visualizacao tfoot tr {
+  background-color: #202d3c !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+.ThemeOfficeMainItemHover,
+.ThemeOfficeMainItemActive,
+.ThemeOfficeMenuItemHover,
+.ThemeOfficeMenuItemActive {
+  background-color: #2d4263 !important;
+  color: #fff !important;
+}
+
+/* Hover visível nos menus ThemeOffice: a biblioteca colore a linha, mas os
+   spans/td internos possuem fundo próprio e escondem esse estado. */
+.ThemeOfficeMainItemHover,
+.ThemeOfficeMainItemActive {
+  background-color: #3f68aa !important;
+  box-shadow: inset 0 -3px 0 #9bc4ff !important;
+  color: #fff !important;
+}
+
+.ThemeOfficeMainItemHover > .ThemeOfficeMainFolderLeft,
+.ThemeOfficeMainItemHover > .ThemeOfficeMainFolderText,
+.ThemeOfficeMainItemHover > .ThemeOfficeMainFolderRight,
+.ThemeOfficeMainItemActive > .ThemeOfficeMainFolderLeft,
+.ThemeOfficeMainItemActive > .ThemeOfficeMainFolderText,
+.ThemeOfficeMainItemActive > .ThemeOfficeMainFolderRight {
+  background-color: #3f68aa !important;
+  color: #fff !important;
+}
+
+.ThemeOfficeMenuItemHover > .ThemeOfficeMenuItemLeft,
+.ThemeOfficeMenuItemHover > .ThemeOfficeMenuItemText,
+.ThemeOfficeMenuItemHover > .ThemeOfficeMenuItemRight,
+.ThemeOfficeMenuItemHover > .ThemeOfficeMenuFolderLeft,
+.ThemeOfficeMenuItemHover > .ThemeOfficeMenuFolderText,
+.ThemeOfficeMenuItemHover > .ThemeOfficeMenuFolderRight,
+.ThemeOfficeMenuItemActive > .ThemeOfficeMenuItemLeft,
+.ThemeOfficeMenuItemActive > .ThemeOfficeMenuItemText,
+.ThemeOfficeMenuItemActive > .ThemeOfficeMenuItemRight,
+.ThemeOfficeMenuItemActive > .ThemeOfficeMenuFolderLeft,
+.ThemeOfficeMenuItemActive > .ThemeOfficeMenuFolderText,
+.ThemeOfficeMenuItemActive > .ThemeOfficeMenuFolderRight,
+.ThemeOfficeMenuFolderHover > .ThemeOfficeMenuFolderLeft,
+.ThemeOfficeMenuFolderHover > .ThemeOfficeMenuFolderText,
+.ThemeOfficeMenuFolderHover > .ThemeOfficeMenuFolderRight,
+.ThemeOfficeMenuFolderHover > .ThemeOfficeMenuItemLeft,
+.ThemeOfficeMenuFolderHover > .ThemeOfficeMenuItemText,
+.ThemeOfficeMenuFolderHover > .ThemeOfficeMenuItemRight,
+.ThemeOfficeMenuFolderActive > .ThemeOfficeMenuFolderLeft,
+.ThemeOfficeMenuFolderActive > .ThemeOfficeMenuFolderText,
+.ThemeOfficeMenuFolderActive > .ThemeOfficeMenuFolderRight,
+.ThemeOfficeMenuFolderActive > .ThemeOfficeMenuItemLeft,
+.ThemeOfficeMenuFolderActive > .ThemeOfficeMenuItemText,
+.ThemeOfficeMenuFolderActive > .ThemeOfficeMenuItemRight {
+  background-color: #456fae !important;
+  color: #fff !important;
+}
+
+.ThemeOfficeMenuItemHover > .ThemeOfficeMenuItemLeft,
+.ThemeOfficeMenuItemHover > .ThemeOfficeMenuFolderLeft,
+.ThemeOfficeMenuItemActive > .ThemeOfficeMenuItemLeft,
+.ThemeOfficeMenuItemActive > .ThemeOfficeMenuFolderLeft,
+.ThemeOfficeMenuFolderHover > .ThemeOfficeMenuFolderLeft,
+.ThemeOfficeMenuFolderHover > .ThemeOfficeMenuItemLeft,
+.ThemeOfficeMenuFolderActive > .ThemeOfficeMenuFolderLeft,
+.ThemeOfficeMenuFolderActive > .ThemeOfficeMenuItemLeft {
+  box-shadow: inset 3px 0 0 #a8ceff !important;
+}
+
+.rich-box-bgcolor-table-footer,
+.rich-container button[disabled],
+.rich-button-disabled,
+.rich-button-button-disabled,
+.rich-button-reset-disabled,
+.rich-button-submit-disabled,
+.rich-input-reset-disabled,
+.rich-input-submit-disabled,
+.rich-input-button-disabled {
+  background-color: #242d39 !important;
+  border-color: #3b4859 !important;
+  color: #8f9caf !important;
+}
+
+.rich-mpnl-mask-div,
+.mask,
+.ydlg-mask {
+  background-color: #05080d !important;
+  opacity: 0.7 !important;
+}
+
+.rich-tool-tip {
+  background-color: #302d1b !important;
+  border-color: #6b6337 !important;
+  color: #f0e6ab !important;
+}
+
+.rich-mpnl-iframe,
+.rich-mpnl-content {
+  background-color: var(--sigrh-surface-raised) !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+.textcomplete {
+  background-color: #302d1b !important;
+  border-color: #6b6337 !important;
+  color: #f0e6ab !important;
+}
+
+.btnCrudCadastrar,
+.caixaCinzaEscura,
+td.azulMedio,
+#cronograma td.selecionado {
+  background-color: var(--sigrh-surface-soft) !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+#info-sistema span.sair-sistema p {
+  background-color: var(--sigrh-brand) !important;
+  color: #fff !important;
+}
+
+.logon h3 {
+  background-color: var(--sigrh-brand) !important;
+  background-image: none !important;
+  color: #fff !important;
+}
+
+.ydlg-shadow,
+.ytheme-gray .ydlg-shadow {
+  background-color: #05080d !important;
+  opacity: 0.5 !important;
+}
+
+.panel-container.shadow .underlay {
+  background-color: #05080d !important;
+}
+
+.calendar thead .hilite,
+.calendar tfoot .hilite,
+.calendar .combo .hilite {
+  background-color: var(--sigrh-brand-hover) !important;
+  color: #fff !important;
+}
+
+.button-group button:hover,
+.button-group button.hover,
+.button-group button:active {
+  background-color: var(--sigrh-brand-hover) !important;
+  color: #fff !important;
+}
+
+#menu_principal ul li {
+  background-color: #202b39 !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+/* Hierarquia visual da janela de módulos, preservando o tamanho original. */
+#painel-modulos-sigrh .ydlg-hd,
+#painel-modulos-sigrh .ydlg-hd-left,
+#painel-modulos-sigrh .ydlg-hd-right {
+  background-color: var(--sigrh-brand) !important;
+  background-image: none !important;
+  border-color: #5577ad !important;
+  color: #fff !important;
+}
+
+#painel-modulos-sigrh {
+  border-radius: 6px !important;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.58) !important;
+}
+
+#painel-modulos-sigrh .ydlg-dlg-body,
+#painel-modulos-sigrh .ydlg-bd,
+#painel-modulos-sigrh #menu_principal {
+  background-color: #151c26 !important;
+  background-image: none !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+#painel-modulos-sigrh #menu_principal #modulos,
+#painel-modulos-sigrh #menu_principal #portais {
+  background-color: var(--sigrh-surface-raised) !important;
+  background-image: none !important;
+  border-color: var(--sigrh-border) !important;
+  box-shadow: inset 0 0 0 1px #415675 !important;
+}
+
+#painel-modulos-sigrh #menu_principal h2 {
+  background-color: #243b63 !important;
+  background-image: none !important;
+  border-color: #5577ad !important;
+  color: #fff !important;
+}
+
+#painel-modulos-sigrh #menu_principal li.off,
+#painel-modulos-sigrh #menu_principal li.on {
+  background-color: #1d2a3a !important;
+  border-color: var(--sigrh-border) !important;
+  border-radius: 3px !important;
+  box-shadow: inset 0 0 0 1px #425675 !important;
+  color: var(--sigrh-text) !important;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+#painel-modulos-sigrh #menu_principal li.on {
+  background-color: #29436f !important;
+  box-shadow: inset 0 -3px 0 var(--sigrh-focus),
+    inset 0 0 0 1px #5577ad !important;
+}
+
+#painel-modulos-sigrh #menu_principal li:hover {
+  background-color: #354b6d !important;
+  box-shadow: inset 0 0 0 1px #78a9ff !important;
+}
+
+#painel-modulos-sigrh #menu_principal li a {
+  background-color: #26374d !important;
+  background-image: none !important;
+  border-top: 1px solid #425675 !important;
+  color: #eef4fc !important;
+  text-decoration: none !important;
+  text-shadow: none !important;
+}
+
+#painel-modulos-sigrh #menu_principal li.on a {
+  background-color: #31517f !important;
+}
+
+#painel-modulos-sigrh #menu_principal li:hover a,
+#painel-modulos-sigrh #menu_principal li.on a {
+  color: #fff !important;
+}
+
+#painel-modulos-sigrh #menu_principal li:hover a {
+  background-color: #3a5b87 !important;
+}
+
+#painel-modulos-sigrh .ydlg-close {
+  filter: brightness(1.7) contrast(1.1) !important;
+}
+
+/* Home pública: estrutura própria de public.css/public_sigrh.css. */
+#container:has(> #container-inner > #corpo) {
+  width: 950px !important;
+  min-height: 0 !important;
+  margin: 0 auto 40px !important;
+  overflow: hidden !important;
+  background: var(--sigrh-surface) !important;
+  border-color: var(--sigrh-border) !important;
+  border-radius: 0 0 6px 6px !important;
+}
+
+#container:has(> #container-inner > #corpo) > #container-inner > #cabecalho {
+  height: 81px !important;
+  min-height: 81px !important;
+  border-color: var(--sigrh-border) !important;
+}
+
+#corpo {
+  background: var(--sigrh-surface) !important;
+  color: var(--sigrh-text) !important;
+}
+
+#corpo h2 {
+  background-color: var(--sigrh-surface-raised) !important;
+  background-image: none !important;
+  border-bottom-color: var(--sigrh-border) !important;
+  color: #d99c44 !important;
+}
+
+#corpo h2 a,
+#corpo h2 a:link,
+#corpo h2 a:visited {
+  color: #82b2ff !important;
+}
+
+#corpo h2 a:hover,
+#corpo h2 a:focus {
+  color: #b2d0ff !important;
+}
+
+#corpo #menu,
+#corpo #bg-bottom,
+#corpo #bg-top {
+  background-color: var(--sigrh-surface-raised) !important;
+  background-image: none !important;
+  border-color: var(--sigrh-border) !important;
+}
+
+#corpo #menu {
+  box-shadow: inset 0 0 0 1px var(--sigrh-border) !important;
+}
+
+#corpo #modulos {
+  color: var(--sigrh-text) !important;
+}
+
+#corpo #modulos .item {
+  background-color: transparent !important;
+  background-image: none !important;
+  color: #c7d2e2 !important;
+  text-shadow: none !important;
+}
+
+#corpo #modulos .item:not(.item-over):not(.inativo):hover {
+  background-color: #26374d !important;
+  color: #fff !important;
+}
+
+#corpo #modulos .item-over {
+  background-color: var(--sigrh-brand) !important;
+  background-image: none !important;
+  box-shadow: inset 4px 0 0 var(--sigrh-focus) !important;
+  color: #fff !important;
+}
+
+#corpo #modulos .inativo {
+  color: #718096 !important;
+}
+
+#corpo #modulos .topico {
+  color: var(--sigrh-text) !important;
+}
+
+#corpo #opcoes-modulo,
+#corpo #opcoes-modulo .painel,
+#corpo #opcoes-modulo dl,
+#corpo #opcoes-modulo ul {
+  background-color: transparent !important;
+  color: var(--sigrh-text) !important;
+}
+
+#corpo #opcoes-modulo dt,
+#corpo #opcoes-modulo li {
+  color: var(--sigrh-text) !important;
+}
+
+#corpo #opcoes-modulo h3,
+#corpo #opcoes-modulo #p-comunicados-dinamicos h3,
+#corpo #opcoes-modulo #p-comunicados-fixos h3 {
+  color: #dce7f7 !important;
+}
+
+#corpo #opcoes-modulo a,
+#corpo #opcoes-modulo ul li a {
+  color: var(--sigrh-muted) !important;
+}
+
+#corpo #opcoes-modulo a:hover,
+#corpo #opcoes-modulo ul li a:hover {
+  color: #fff !important;
+}
+
+#corpo #opcoes-modulo dt.opcao-over,
+#corpo #opcoes-modulo ul li.opcao-lista-over {
+  background-color: #26374d !important;
+  background-image: none !important;
+  border-radius: 4px !important;
+}
+
+#corpo #opcoes-modulo form,
+#corpo .painel_generico {
+  background-color: #18212c !important;
+  background-image: none !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+#corpo #noticias,
+#corpo #sistemas {
+  color: var(--sigrh-text) !important;
+}
+
+#corpo #noticias h3,
+#corpo #sistemas h3 {
+  color: #dce7f7 !important;
+  border-bottom-color: #d99c44 !important;
+}
+
+#corpo #noticias .noticia h4,
+#corpo #sistemas .sistema h4 {
+  color: #dce7f7 !important;
+}
+
+#corpo #noticias .noticia p,
+#corpo #sistemas .sistema p,
+#corpo #noticias .noticia h4 span.data,
+#corpo #sistemas .sistema h4 span.data {
+  color: var(--sigrh-muted) !important;
+}
+
+#corpo .infoAltRem,
+#corpo .vazio {
+  background-color: var(--sigrh-surface-soft) !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-muted) !important;
+}
+
+#corpo #painel-erros {
+  background-color: #251b1e !important;
+  border-color: #6b3f48 !important;
+}
+
+#corpo a.ver-mais,
+#corpo #sistemas .sipac p,
+#corpo #sistemas .sco p,
+#corpo #sistemas .protocolo p {
+  background-color: #18212c !important;
+  color: var(--sigrh-text) !important;
+}
+
+/* Blocos iconográficos compartilhados pelo seletor de módulos. */
+div.cursoTecnico,
+div.discenteTecnico,
+div.disciplinaTecnico,
+div.turmaTecnico,
+div.administracaoTecnico,
+div.relatorioTecnico,
+div.cursoMedio,
+div.discenteMedio,
+div.disciplinaMedio,
+div.turmaMedio,
+div.administracaoMedio,
+div.cursoInfantil,
+div.discenteInfantil,
+div.disciplinaInfantil,
+div.turmaInfantil,
+div.administracaoInfantil,
+div.cursoLato,
+div.discenteLato,
+div.disciplinaLato,
+div.turmaLato,
+div.relatoriosLato,
+div.administracaoLato,
+div.projeto,
+div.grupo_pesquisa,
+div.iniciacao,
+div.relatorios,
+div.administracaoPesquisa,
+div.administracao,
+div.comissao,
+div.cadastros,
+div.coordenacao {
+  background-color: var(--sigrh-surface-soft) !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b1017;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b4c62;
+  border: 2px solid #0b1017;
+  border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+  #container {
+    width: calc(100% - 16px) !important;
+    margin: 8px auto 220px !important;
+  }
+
+  #conteudo {
+    padding: 12px !important;
+  }
+
+  .box-cookies {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    padding: 16px !important;
+  }
+
+  .btn-cookies {
+    flex-basis: 40px !important;
+    width: 100% !important;
+  }
+}
+
+@media print {
+  html,
+  body,
+  #container,
+  #cabecalho,
+  #conteudo,
+  #rodape,
+  #menu-usuario,
+  #menu-dropdown,
+  #perfil-servidor,
+  .pessoal-servidor,
+  #agenda-servidor,
+  #noticias-portal,
+  .simple-panel,
+  .formulario,
+  .listagem,
+  .tabela,
+  .descricaoOperacao,
+  .subFormulario,
+  .subListagem,
+  .visualizacao,
+  .msgPane,
+  .caixaBranca,
+  .caixaCinza,
+  .caixaCinzaMedio,
+  .infoAltRem,
+  div.aba,
+  .tabContent,
+  .autocomplete,
+  fieldset,
+  table,
+  tbody,
+  tr,
+  td,
+  th {
+    background: #fff !important;
+    color: #000 !important;
+    box-shadow: none !important;
+  }
+
+  .box-cookies,
+  #fundo-aviso-cookies {
+    display: none !important;
+  }
+}

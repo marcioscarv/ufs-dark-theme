@@ -1,0 +1,748 @@
+/* ========================================= */
+/*          POLARE DARK MODE FULL            */
+/* ========================================= */
+
+:root {
+
+  /* ===== Base Dark Palette ===== */
+  --white: #121417;
+  --light: #1c1f26;
+  --gray: #8b93a6;
+  --gray-dark: #e4e8f0;
+
+  --secondary-lightest-color: #1c1f26;
+  --secondary-lighter-color: #232730;
+  --secondary-light-color: #2c313c;
+  --secondary-color: #353b47;
+  --secondary-dark-color: #8b93a6;
+  --secondary-darker-color: #aab2c5;
+  --secondary-darkest-color: #e4e8f0;
+
+  --bg-color: #121417;
+  --text-color: #e4e8f0;
+  --text-muted-color: #8b93a6;
+  --text-logo: #cfd6e6;
+
+  --border-color: #2c313c;
+
+  --bg-card-head-color: #232730;
+  --border-card-icon-right: #2c313c;
+
+  --bg-custom-dropdown: #232730;
+  --text-custom-dropdown: #e4e8f0;
+
+  /* Header */
+  --header-bg-color: #181b21;
+
+  /* Pequeno ajuste no verde para contraste */
+  --primary-light-color: #9fe870;
+}
+
+html[paleta=social] {
+    --primary-light-color: #85cc3d;  
+}
+
+/* ========================================= */
+/* BODY & HTML                              */
+/* ========================================= */
+
+html,
+body {
+  background-color: #121417 !important;
+  color: var(--text-color) !important;
+}
+
+/* Remove qualquer fundo branco herdado */
+.bg-white,
+.bg-light,
+.background-white,
+[class*="bg-white"] {
+  background-color: #1c1f26 !important;
+}
+
+/* ========================================= */
+/* HEADER SUPERIOR                          */
+/* ========================================= */
+
+.header,
+.navbar,
+.topbar,
+header {
+  background-color: #121417 !important;
+  border-color: #2c313c !important;
+}
+
+.fieldset-group.disabled, .fieldset-group[disabled], .fieldset-group[disabled] > legend, .fieldset-group[disabled] .tooltip-group label, label.disabled, label[disabled], label[disabled] > legend, label[disabled] .tooltip-group label {
+    color: #535353;
+    cursor: not-allowed;
+}
+
+.form-control:disabled ~ label, .form-control:disabled ~ .form-text, .form-control.disabled ~ label, .form-control.disabled ~ .form-text {
+    color: #535353;
+}
+
+#barra-brasil .list-item {
+    border-right: 2px solid #84c84a !important;
+}
+
+#barra-brasil {
+    border-bottom: 1px solid #83c649 !important;
+}
+
+#barra-brasil .brasil-flag {
+    border-right: 2px solid #83c84a !important;
+}
+
+.progress {
+    background-color: #559940 !important;
+}
+
+
+
+.form-group .combo {
+    display: block;
+    position: relative;  
+    --combobox-option-selected-bg-color: #3f533b;
+    --combobox-option-hover-bg-color: #3f533b;
+}
+
+.datepicker__modal__wrapper {
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.251);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.251);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.938rem;
+    background-clip: padding-box;
+    background-color: #121417;
+    color: #5b6372;
+    padding: 0.2rem;
+    padding-top: 0.8rem;
+    position: absolute;
+    display: none;
+    z-index: 9999;
+}
+
+/* Barra Brasil topo */
+.barra-brasil,
+#barra-brasil {
+  background-color: #0f1115 !important;
+}
+
+/* ========================================= */
+/* MENU LATERAL                             */
+/* ========================================= */
+
+.menu-lateral {
+  background: linear-gradient(180deg, #14171d, #181b21) !important;
+  border-right: 1px solid #2c313c !important;
+}
+
+.menu-lateral .nav-link {
+  color: #aab2c5 !important;
+}
+
+.menu-lateral .nav-link:hover,
+.menu-lateral .nav-link.active {
+  background-color: #232730 !important;
+  color: var(--primary-color) !important;
+}
+
+/* ========================================= */
+/* CONTEÚDO CENTRAL                         */
+/* ========================================= */
+
+.container-conteudo,
+.container,
+.container-fluid,
+.card,
+.modal-content {
+  background-color: #1c1f26 !important;
+  color: var(--text-color) !important;
+}
+
+/* ========================================= */
+/* CARDS                                    */
+/* ========================================= */
+
+.card {
+  border: 1px solid #2c313c !important;
+}
+
+.card-header,
+.card-footer {
+  background-color: #232730 !important;
+  border-color: #2c313c !important;
+}
+
+.card-body {
+  background-color: #1c1f26 !important;
+}
+
+/* ========================================= */
+/* BOTÕES                                   */
+/* ========================================= */
+
+.btn-dark,
+.btn-secondary {
+  background-color: #232730 !important;
+  border-color: #2c313c !important;
+}
+
+.btn-dark:hover,
+.btn-secondary:hover {
+  background-color: #2c313c !important;
+}
+
+/* ========================================= */
+/* INPUTS                                   */
+/* ========================================= */
+
+input,
+select,
+textarea,
+.form-control {
+  background-color: #232730 !important;
+  border: 1px solid #2c313c !important;
+  color: #e4e8f0 !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #8b93a6 !important;
+}
+
+/* ========================================= */
+/* DROPDOWNS                                */
+/* ========================================= */
+
+.dropdown-menu {
+  background-color: #232730 !important;
+  border: 1px solid #2c313c !important;
+}
+
+.dropdown-item {
+  color: #e4e8f0 !important;
+}
+
+.dropdown-item:hover {
+  background-color: #2c313c !important;
+}
+
+/* ========================================= */
+/* TABELAS                                  */
+/* ========================================= */
+
+table {
+  background-color: #1c1f26 !important;
+  color: var(--text-color) !important;
+}
+
+thead {
+  background-color: #232730 !important;
+}
+
+tr:nth-child(even) {
+  background-color: #181b21 !important;
+}
+
+/* ========================================= */
+/* MODAIS                                   */
+/* ========================================= */
+
+.modal-content {
+  background-color: #1c1f26 !important;
+  border: 1px solid #2c313c !important;
+}
+
+/* ========================================= */
+/* GRADIENTE HOME                           */
+/* ========================================= */
+
+.gradiente:before {
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    rgba(18, 20, 23, 0.6)
+  ) !important;
+}
+
+/* ========================================= */
+/* TOOLTIP                                  */
+/* ========================================= */
+
+.tooltip-inner {
+  background-color: #232730 !important;
+  color: #e4e8f0 !important;
+}
+
+/* ========================================= */
+/* SCROLLBAR                                */
+/* ========================================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121417;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2c313c;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #353b47;
+}
+
+/* ========================================= */
+/* FORÇA FINAL CONTRA BRANCOS HARD-CODED    */
+/* ========================================= */
+
+div[style*="background-color: #fff"],
+div[style*="background:#fff"],
+div[style*="background: #ffffff"],
+section[style*="background-color: #fff"] {
+  background-color: #1c1f26 !important;
+}
+
+/* Refinamento visual do Polare ------------------------------------------ */
+
+:root {
+  color-scheme: dark;
+  --polare-bg: #11151b;
+  --polare-surface: #191e26;
+  --polare-surface-2: #202630;
+  --polare-hover: #29313c;
+  --polare-border: #343c49;
+  --polare-text: #e4e8f0;
+  --polare-muted: #aab2c5;
+  --polare-green: #9fe870;
+  --polare-green-strong: #85cc3d;
+  --polare-focus: rgba(133, 204, 61, 0.28);
+  --outline-focus-color: var(--polare-green);
+}
+
+#barra-brasil,
+.barra-brasil {
+  background: #0d1014 !important;
+  color: var(--polare-muted) !important;
+  border-color: #416d35 !important;
+}
+
+#barra-brasil .link-barra,
+#barra-brasil .list-item,
+#barra-brasil .list-item a,
+#barra-brasil a {
+  color: var(--polare-muted) !important;
+}
+
+#barra-brasil a:hover,
+#barra-brasil a:focus-visible {
+  color: var(--polare-text) !important;
+}
+
+.header {
+  background: #111419 !important;
+  border-bottom: 1px solid var(--polare-border) !important;
+}
+
+.header button.icon,
+.header .icon,
+.header__user {
+  color: var(--polare-muted) !important;
+}
+
+.container-conteudo {
+  background: linear-gradient(180deg, #181d25, var(--polare-bg)) !important;
+}
+
+.menu-lateral {
+  background: linear-gradient(180deg, #14181f, #11151b) !important;
+  border-right: 1px solid var(--polare-border) !important;
+}
+
+.menu-lateral .nav-link {
+  border-radius: 5px;
+  color: var(--polare-muted) !important;
+}
+
+.menu-lateral .nav-link:hover {
+  background: var(--polare-hover) !important;
+  color: var(--polare-text) !important;
+}
+
+.menu-lateral .nav-link.active {
+  background: #252c36 !important;
+  color: var(--polare-green) !important;
+  box-shadow: inset 3px 0 0 var(--polare-green-strong);
+}
+
+.conteudo-principal {
+  background: var(--polare-surface) !important;
+  color: var(--polare-text) !important;
+  border-color: var(--polare-border) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.22);
+}
+
+.conteudo-principal__header {
+  border-color: var(--polare-border) !important;
+}
+
+.card,
+.card-simple,
+.card-custom {
+  background: var(--polare-surface-2) !important;
+  color: var(--polare-text) !important;
+  border-color: var(--polare-border) !important;
+  border-radius: 6px !important;
+}
+
+.card-simple a,
+.card a {
+  color: var(--polare-text) !important;
+}
+
+.card-simple:has(a):hover,
+.card:has(a):hover {
+  background: var(--polare-hover) !important;
+  border-color: #52713f !important;
+}
+
+.card-header,
+.card-footer {
+  background: #242b35 !important;
+  border-color: var(--polare-border) !important;
+}
+
+input,
+select,
+textarea,
+.form-control,
+.form-datepicker {
+  background: var(--polare-surface-2) !important;
+  color: var(--polare-text) !important;
+  border-color: var(--polare-border) !important;
+}
+
+input:focus,
+input:focus-visible,
+select:focus,
+textarea:focus,
+.form-control:focus {
+  border-color: var(--polare-green-strong) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px var(--polare-focus) !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--polare-text) !important;
+  caret-color: var(--polare-green);
+  box-shadow: 0 0 0 1000px var(--polare-surface-2) inset !important;
+}
+
+.ds-datepicker-button,
+.input-group-addon,
+#dropdownAc {
+  color: var(--polare-muted) !important;
+}
+
+.required {
+  color: #f0c75e !important;
+}
+
+.form-group label,
+.fieldset-group legend,
+.label {
+  color: var(--polare-text) !important;
+}
+
+.fieldset-group.disabled,
+.fieldset-group[disabled],
+.fieldset-group[disabled] > legend,
+.form-group.disabled label,
+label.disabled,
+label[disabled],
+.form-control:disabled ~ label,
+.form-control:disabled ~ .form-text {
+  color: #7f899b !important;
+}
+
+.form-control:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+  background: #1a1f27 !important;
+  color: #7f899b !important;
+  border-color: #303744 !important;
+  opacity: 1 !important;
+}
+
+.btn-primary {
+  background: var(--polare-green-strong) !important;
+  color: #11180d !important;
+  border-color: var(--polare-green-strong) !important;
+}
+
+.btn-primary:hover {
+  background: var(--polare-green) !important;
+  color: #11180d !important;
+  border-color: var(--polare-green) !important;
+}
+
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.btn-quaternary:focus-visible {
+  outline: none !important;
+  box-shadow: 0 0 0 3px var(--polare-focus) !important;
+}
+
+.btn-secondary,
+.btn-dark {
+  background: var(--polare-surface-2) !important;
+  color: var(--polare-text) !important;
+  border-color: var(--polare-border) !important;
+}
+
+.btn-secondary:hover,
+.btn-dark:hover {
+  background: var(--polare-hover) !important;
+  color: var(--polare-text) !important;
+  border-color: #4b5666 !important;
+}
+
+.btn-quaternary {
+  background: transparent !important;
+  color: var(--polare-green) !important;
+  border-color: #52713f !important;
+}
+
+.conteudo-principal__footer {
+  border-color: var(--polare-border) !important;
+}
+
+#barra-brasil .link-vlibras {
+  color: var(--polare-muted) !important;
+  border-color: #416d35 !important;
+}
+
+/* Calendário do design system. */
+.datepicker__modal__wrapper {
+  background: var(--polare-surface-2) !important;
+  color: var(--polare-text) !important;
+  border: 1px solid var(--polare-border) !important;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.32) !important;
+}
+
+.datepicker__header,
+.datepicker__header button,
+.datepicker__header .header__currentMonthYear {
+  color: var(--polare-text) !important;
+  border-color: var(--polare-border) !important;
+}
+
+.datepicker__header .header__buttons,
+.datepicker__header .fas,
+.datepicker__header .fa-solid {
+  color: var(--polare-green) !important;
+}
+
+.datepicker__dateTable,
+.datepicker__dateTable thead,
+.datepicker__dateTable tbody,
+.datepicker__dateTable tr {
+  background: transparent !important;
+  color: var(--polare-text) !important;
+}
+
+.datepicker__dateTable th {
+  color: var(--polare-muted) !important;
+}
+
+.datepicker__dateTable td {
+  background: transparent !important;
+  color: var(--polare-text) !important;
+  border-color: transparent !important;
+}
+
+.datepicker__dateTable td:not(.disabled):hover {
+  background: var(--polare-hover) !important;
+  color: var(--polare-green) !important;
+}
+
+.datepicker__dateTable td.currentDay {
+  color: var(--polare-green) !important;
+  border-color: var(--polare-green-strong) !important;
+}
+
+.datepicker__dateTable td.selected,
+.datepicker__dateTable td[aria-selected="true"] {
+  background: var(--polare-green-strong) !important;
+  color: #11180d !important;
+}
+
+.datepicker__dateTable td.disabled {
+  color: #687385 !important;
+  opacity: 0.65;
+}
+
+.datepicker__modal__wrapper .modal__messages.sr-only {
+  background: transparent !important;
+  color: var(--polare-muted) !important;
+}
+
+.footer {
+  background: #171b22 !important;
+  color: var(--polare-muted) !important;
+  border-top: 1px solid var(--polare-border) !important;
+}
+
+/* Tela de entrada pública. */
+.conteudo-principal.p-4:has(.link-auth) {
+  width: 410px !important;
+  max-width: calc(100vw - 32px);
+  padding: 30px !important;
+  box-sizing: border-box;
+  background: rgba(25, 30, 38, 0.98) !important;
+  border: 1px solid var(--polare-border) !important;
+  border-radius: 9px !important;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.3);
+}
+
+.conteudo-principal.p-4:has(.link-auth) .titulo {
+  color: var(--polare-text) !important;
+  border-color: var(--polare-border) !important;
+  font-size: 15px !important;
+  letter-spacing: 0.18em;
+}
+
+.conteudo-principal.p-4:has(.link-auth) .card-simple {
+  overflow: hidden;
+  background: var(--polare-surface-2) !important;
+}
+
+.conteudo-principal.p-4:has(.link-auth) .link-auth {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 72px;
+  box-sizing: border-box;
+  gap: 14px;
+  color: var(--polare-text) !important;
+  border-radius: 5px;
+  transition: background-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.conteudo-principal.p-4:has(.link-auth) .link-auth:hover {
+  background: var(--polare-hover) !important;
+}
+
+.conteudo-principal.p-4:has(.link-auth) .link-auth:focus-visible {
+  outline: none !important;
+  box-shadow: inset 0 0 0 2px var(--polare-green-strong),
+    0 0 0 3px var(--polare-focus);
+}
+
+.conteudo-principal.p-4:has(.link-auth) .link-auth svg {
+  opacity: 0.9;
+  filter: brightness(1.45) contrast(0.9);
+}
+
+a[href="/publico"],
+a[href="https://polare.ufs.br/publico"] {
+  color: var(--polare-green) !important;
+}
+
+a[href="/publico"]:hover,
+a[href="https://polare.ufs.br/publico"]:hover {
+  color: #b9f58f !important;
+}
+
+/* Consentimento de cookies. */
+.cookies-consent-dialog {
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 18px 28px !important;
+  box-sizing: border-box;
+  gap: 22px;
+  background: rgba(23, 27, 34, 0.98) !important;
+  color: var(--polare-text) !important;
+  border: 0 !important;
+  border-top: 1px solid var(--polare-border) !important;
+  border-right: 0 !important;
+  border-bottom: 0 !important;
+  border-left: 0 !important;
+  box-shadow: 0 -12px 34px rgba(0, 0, 0, 0.28);
+}
+
+.cookies-consent-dialog .container {
+  max-width: 1200px !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+.cookies-consent-dialog p {
+  margin: 0 !important;
+  color: var(--polare-muted) !important;
+  line-height: 1.55 !important;
+}
+
+.cookies-consent-dialog a {
+  color: var(--polare-green) !important;
+}
+
+.cookies-consent-dialog .consent-button {
+  min-width: 92px;
+  min-height: 36px;
+  margin: 0 !important;
+  padding: 7px 16px !important;
+  background: var(--polare-green-strong) !important;
+  color: #11180d !important;
+  border: 1px solid var(--polare-green-strong) !important;
+  border-radius: 999px !important;
+  font-weight: 700;
+}
+
+.cookies-consent-dialog .consent-button:hover {
+  background: var(--polare-green) !important;
+  border-color: var(--polare-green) !important;
+}
+
+@media (min-width: 721px) {
+  .cookies-consent-dialog {
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: row !important;
+  }
+
+  .cookies-consent-dialog .container {
+    width: min(1200px, calc(100% - 150px)) !important;
+    margin: 0 !important;
+  }
+
+  .cookies-consent-dialog .consent-button {
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .conteudo-principal.p-4:has(.link-auth) {
+    width: min(410px, 100%) !important;
+    padding: 24px 20px !important;
+  }
+
+  .cookies-consent-dialog {
+    align-items: stretch !important;
+    flex-direction: column;
+    padding: 16px !important;
+    gap: 12px;
+  }
+
+  .cookies-consent-dialog .consent-button {
+    align-self: flex-end;
+  }
+}
