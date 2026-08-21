@@ -18,6 +18,14 @@ Extensão para Google Chrome que aplica um tema escuro aos sistemas instituciona
 5. Selecione a pasta do projeto.
 
 O tema de cada sistema pode ser ativado ou desativado pelo painel da extensão.
+Na impressão, o tema é suspenso automaticamente para preservar o formato e as
+cores originais dos documentos; ao fechar a impressão, o modo escuro retorna.
+
+## Como o tema funciona
+
+A extensão usa um motor dinâmico local para analisar e transformar as cores das páginas em tempo real. Os arquivos em `styles/` são aplicados como uma camada final de correções, preservando a identidade visual da UFS e os ajustes específicos de cada sistema.
+
+Se o motor dinâmico não puder ser iniciado, a extensão utiliza automaticamente o CSS específico do sistema como modo de compatibilidade.
 
 ## Capturas de tela
 
@@ -42,7 +50,9 @@ Consulte a [política de privacidade](docs/PRIVACY-POLICY.md) para mais detalhes
 ## Estrutura
 
 - `manifest.json`: configuração Manifest V3.
-- `content.js`: carregamento dos temas.
+- `background.js`: busca restrita de recursos visuais hospedados em domínios da UFS.
+- `content.js`: integração do motor dinâmico e carregamento das correções.
 - `popup.html` e `popup.js`: painel da extensão.
 - `styles/`: temas específicos de cada sistema.
+- `vendor/`: componentes internos do motor visual e licenças obrigatórias.
 - `icons/`: ícones da extensão.

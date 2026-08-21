@@ -26,8 +26,11 @@ valores.
 
 A extensão é executada apenas nos domínios institucionais especificados em seu
 manifesto. O acesso é utilizado exclusivamente para inserir arquivos CSS locais
-e ajustar visualmente componentes dinâmicos. Nenhum conteúdo das páginas é
-armazenado, copiado ou enviado ao desenvolvedor ou a terceiros.
+e ajustar visualmente componentes dinâmicos. Quando uma folha de estilo ou
+imagem hospedada em um domínio `ufs.br` não pode ser lida diretamente pela
+página, a extensão pode solicitar novamente esse mesmo recurso institucional
+para calcular o tema. Nenhum conteúdo das páginas é armazenado, copiado ou
+enviado ao desenvolvedor ou a terceiros.
 
 ## Compartilhamento e venda de dados
 
@@ -38,7 +41,9 @@ terceiros e não utiliza dados para publicidade ou criação de perfis.
 
 Todo o código executado pela extensão está contido no pacote instalado. A
 extensão não baixa código remoto, não possui serviço de análise e não se
-comunica com servidores controlados pelo desenvolvedor.
+comunica com servidores controlados pelo desenvolvedor. As únicas solicitações
+auxiliares permitidas são para recursos visuais já referenciados pelas páginas
+e hospedados em domínios institucionais da UFS.
 
 ## Controle do usuário
 
