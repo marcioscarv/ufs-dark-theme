@@ -20,7 +20,7 @@
       overflow: hidden;
     }
 
-    /* Cabeçalho com Degradê UFS */
+
     .header {
       background: linear-gradient(135deg,
           var(--ufs-blue) 0%,
@@ -43,7 +43,7 @@
       opacity: 0.8;
     }
 
-    /* Lista de Opções */
+
     .content {
       padding: 15px;
     }
@@ -66,6 +66,8 @@
     .site-info {
       display: flex;
       flex-direction: column;
+      min-width: 0;
+      padding-right: 8px;
     }
 
     .site-name {
@@ -75,13 +77,15 @@
 
     .site-url {
       font-size: 10px;
+      line-height: 1.35;
       color: #8b949e;
     }
 
-    /* Switch Moderno */
+
     .switch {
       position: relative;
       display: inline-block;
+      flex: 0 0 auto;
       width: 42px;
       height: 22px;
     }
@@ -129,7 +133,7 @@
       transform: translateX(20px);
     }
 
-    /* Rodapé */
+
     .footer {
       text-align: center;
       padding: 10px;
@@ -182,11 +186,22 @@
 
     <div class="site-row">
       <div class="site-info">
-        <span class="site-name">SIGRH (beta)</span>
-        <span class="site-url">sigrh.ufs.br</span>
+        <span class="site-name">SEI</span>
+        <span class="site-url">sei.ufs.br</span>
       </div>
       <label class="switch">
-        <input type="checkbox" id="sigrh_toggle" />
+        <input type="checkbox" id="sei_toggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="site-row">
+      <div class="site-info">
+        <span class="site-name">SIGs (beta)</span>
+        <span class="site-url">SIGAA · SIPAC · SIGRH · SIGADMIN · SIGEleição · RESUNWEB · Caixa Postal</span>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="sigs_toggle" />
         <span class="slider"></span>
       </label>
     </div>

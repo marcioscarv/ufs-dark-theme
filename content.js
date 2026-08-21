@@ -1,3 +1,7 @@
+const SIGS_STORAGE_KEY = 'sigs_dark';
+const SIGS_BASE_CSS = 'styles/sigrh.css';
+const SISTEMAS_UFS_HOSTS = new Set(['sistemas.ufs.br', 'www.sistemas.ufs.br']);
+
 const THEMES = Object.freeze({
   'glpi.ufs.br': { storageKey: 'glpi_dark', cssFile: 'styles/glpi.css' },
   'www.glpi.ufs.br': { storageKey: 'glpi_dark', cssFile: 'styles/glpi.css' },
@@ -5,8 +9,64 @@ const THEMES = Object.freeze({
   'www.polare.ufs.br': { storageKey: 'polare_dark', cssFile: 'styles/polare.css' },
   'sso.auth.ufs.br': { storageKey: 'sso_dark', cssFile: 'styles/sso.css' },
   'www.sso.auth.ufs.br': { storageKey: 'sso_dark', cssFile: 'styles/sso.css' },
-  'sigrh.ufs.br': { storageKey: 'sigrh_dark', cssFile: 'styles/sigrh.css' },
-  'www.sigrh.ufs.br': { storageKey: 'sigrh_dark', cssFile: 'styles/sigrh.css' },
+  'sei.ufs.br': {
+    storageKey: 'sei_dark',
+    cssFiles: ['styles/sei.css'],
+    systemId: 'sei',
+  },
+  'www.sei.ufs.br': {
+    storageKey: 'sei_dark',
+    cssFiles: ['styles/sei.css'],
+    systemId: 'sei',
+  },
+  'sigrh.ufs.br': {
+    storageKey: SIGS_STORAGE_KEY,
+    legacyStorageKey: 'sigrh_dark',
+    cssFiles: [SIGS_BASE_CSS],
+    systemId: 'sigrh',
+  },
+  'www.sigrh.ufs.br': {
+    storageKey: SIGS_STORAGE_KEY,
+    legacyStorageKey: 'sigrh_dark',
+    cssFiles: [SIGS_BASE_CSS],
+    systemId: 'sigrh',
+  },
+  'sigaa.ufs.br': {
+    storageKey: SIGS_STORAGE_KEY,
+    legacyStorageKey: 'sigrh_dark',
+    cssFiles: [SIGS_BASE_CSS, 'styles/sigaa.css'],
+    systemId: 'sigaa',
+  },
+  'www.sigaa.ufs.br': {
+    storageKey: SIGS_STORAGE_KEY,
+    legacyStorageKey: 'sigrh_dark',
+    cssFiles: [SIGS_BASE_CSS, 'styles/sigaa.css'],
+    systemId: 'sigaa',
+  },
+  'sipac.ufs.br': {
+    storageKey: SIGS_STORAGE_KEY,
+    legacyStorageKey: 'sigrh_dark',
+    cssFiles: [SIGS_BASE_CSS, 'styles/sipac.css'],
+    systemId: 'sipac',
+  },
+  'www.sipac.ufs.br': {
+    storageKey: SIGS_STORAGE_KEY,
+    legacyStorageKey: 'sigrh_dark',
+    cssFiles: [SIGS_BASE_CSS, 'styles/sipac.css'],
+    systemId: 'sipac',
+  },
+  'resunweb.ufs.br': {
+    storageKey: SIGS_STORAGE_KEY,
+    legacyStorageKey: 'sigrh_dark',
+    cssFiles: ['styles/resunweb.css'],
+    systemId: 'resunweb',
+  },
+  'www.resunweb.ufs.br': {
+    storageKey: SIGS_STORAGE_KEY,
+    legacyStorageKey: 'sigrh_dark',
+    cssFiles: ['styles/resunweb.css'],
+    systemId: 'resunweb',
+  },
 });
 
 const DYNAMIC_THEME = Object.freeze({
@@ -26,7 +86,41 @@ const LEGACY_THEME_LINK_ID = 'ufs-dark-theme';
 const FALLBACK_STYLE_ID = 'ufs-dark-theme-fallback';
 const EDITOR_STYLE_ID = 'ufs-dark-editor-theme';
 const EXTENSION_VERSION = chrome.runtime.getManifest().version;
-const theme = THEMES[window.location.hostname];
+function resolveTheme() {
+  const currentTheme = THEMES[window.location.hostname];
+  if (currentTheme) return currentTheme;
+
+  const isSistemasUFS = SISTEMAS_UFS_HOSTS.has(window.location.hostname);
+  if (!isSistemasUFS) return undefined;
+
+  const isSigEleicao = window.location.pathname === '/sigeleicao'
+    || window.location.pathname.startsWith('/sigeleicao/');
+  const isCxPostal = window.location.pathname === '/cxpostal'
+    || window.location.pathname.startsWith('/cxpostal/');
+
+  let systemId = 'sigadmin';
+  let systemCSS = 'styles/sigadmin.css';
+
+  if (isSigEleicao) {
+    systemId = 'sigeleicao';
+    systemCSS = 'styles/sigeleicao.css';
+  } else if (isCxPostal) {
+    systemId = 'cxpostal';
+    systemCSS = 'styles/cxpostal.css';
+  }
+
+  return {
+    storageKey: SIGS_STORAGE_KEY,
+    legacyStorageKey: 'sigrh_dark',
+    cssFiles: [
+      SIGS_BASE_CSS,
+      systemCSS,
+    ],
+    systemId,
+  };
+}
+
+const theme = resolveTheme();
 
 let activationGeneration = 0;
 let desiredEnabled = false;
@@ -43,19 +137,22 @@ function getDynamicEngine() {
   return dynamicEngine;
 }
 
-function getThemeURL() {
-  const url = chrome.runtime.getURL(theme.cssFile);
+function getThemeFiles() {
+  return theme.cssFiles || [theme.cssFile];
+}
+
+function getThemeURL(cssFile) {
+  const url = chrome.runtime.getURL(cssFile);
   return `${url}?v=${encodeURIComponent(EXTENSION_VERSION)}`;
 }
 
 function loadThemeCSS() {
   if (!themeCSSPromise) {
-    themeCSSPromise = fetch(getThemeURL()).then((response) => {
-      if (!response.ok) {
-        throw new Error(`Não foi possível carregar ${theme.cssFile}.`);
-      }
+    themeCSSPromise = Promise.all(getThemeFiles().map(async (cssFile) => {
+      const response = await fetch(getThemeURL(cssFile));
+      if (!response.ok) throw new Error(`Não foi possível carregar ${cssFile}.`);
       return response.text();
-    });
+    })).then((styles) => styles.join('\n\n'));
   }
   return themeCSSPromise;
 }
@@ -108,16 +205,17 @@ function fetchThroughExtension(url) {
 
 async function fetchForDynamicEngine(url) {
   const resourceURL = new URL(url, window.location.href);
+  const isSupportedResource = Boolean(THEMES[resourceURL.hostname])
+    || SISTEMAS_UFS_HOSTS.has(resourceURL.hostname);
+  if (!isSupportedResource) return new Response('', { status: 200 });
+
   const credentials = resourceURL.origin === window.location.origin
     ? 'include'
     : 'omit';
 
   try {
     return await fetch(resourceURL.href, { credentials });
-  } catch (error) {
-    const isUFSResource = resourceURL.hostname === 'ufs.br'
-      || resourceURL.hostname.endsWith('.ufs.br');
-    if (!isUFSResource) throw error;
+  } catch {
     return fetchThroughExtension(resourceURL.href);
   }
 }
@@ -146,25 +244,27 @@ function removeFallbackStyle() {
 }
 
 function enableLegacyTheme() {
-  let link = document.getElementById(LEGACY_THEME_LINK_ID);
-  if (link) return;
+  if (document.querySelector('[data-ufs-legacy-theme]')) return;
 
-  link = document.createElement('link');
-  link.id = LEGACY_THEME_LINK_ID;
-  link.rel = 'stylesheet';
-  link.media = 'screen';
-  link.href = getThemeURL();
-  (document.head || document.documentElement).appendChild(link);
+  getThemeFiles().forEach((cssFile, index) => {
+    const link = document.createElement('link');
+    link.id = index === 0 ? LEGACY_THEME_LINK_ID : `${LEGACY_THEME_LINK_ID}-${index}`;
+    link.dataset.ufsLegacyTheme = 'true';
+    link.rel = 'stylesheet';
+    link.media = 'screen';
+    link.href = getThemeURL(cssFile);
+    (document.head || document.documentElement).appendChild(link);
+  });
 }
 
 function disableLegacyTheme() {
-  document.getElementById(LEGACY_THEME_LINK_ID)?.remove();
+  document.querySelectorAll('[data-ufs-legacy-theme]').forEach((link) => link.remove());
 }
 
 function isThemeRendered() {
   return desiredEnabled && (
     dynamicThemeActive
-    || Boolean(document.getElementById(LEGACY_THEME_LINK_ID))
+    || Boolean(document.querySelector('[data-ufs-legacy-theme]'))
   );
 }
 
@@ -202,7 +302,6 @@ function syncEditorFrames(isEnabled) {
         frameDocument.head.appendChild(style);
         frame.classList.add('ufs-editor-ready');
       } catch {
-        // Editores de outra origem não permitem acesso ao documento interno.
       }
     };
 
@@ -223,6 +322,14 @@ function queueEditorFrameSync() {
   });
 }
 
+function waitForDocumentBody() {
+  if (document.body) return Promise.resolve();
+
+  return new Promise((resolve) => {
+    document.addEventListener('DOMContentLoaded', resolve, { once: true });
+  });
+}
+
 async function enableDynamicTheme(generation) {
   showFallbackStyle();
 
@@ -231,6 +338,8 @@ async function enableDynamicTheme(generation) {
       Promise.resolve(getDynamicEngine()),
       loadThemeCSS(),
     ]);
+
+    await waitForDocumentBody();
 
     if (!desiredEnabled || generation !== activationGeneration) return;
 
@@ -247,7 +356,8 @@ async function enableDynamicTheme(generation) {
     enableLegacyTheme();
     removeFallbackStyle();
     queueEditorFrameSync();
-    console.warn('[UFS Dark Theme] Motor dinâmico indisponível; usando CSS legado.', error);
+    const reason = error instanceof Error ? error.message : String(error);
+    console.info(`[UFS Dark Theme] CSS legado ativado: ${reason}`);
   }
 }
 
@@ -255,7 +365,8 @@ function disableDynamicTheme() {
   try {
     globalThis.UFSDynamicThemeEngine?.disable?.();
   } catch (error) {
-    console.warn('[UFS Dark Theme] Não foi possível desativar o motor dinâmico.', error);
+    const reason = error instanceof Error ? error.message : String(error);
+    console.info(`[UFS Dark Theme] Motor já estava indisponível: ${reason}`);
   }
   dynamicThemeActive = false;
 }
@@ -303,9 +414,103 @@ function configurePrintMode() {
   });
 }
 
+function decodeSeiTooltipText(value) {
+  return value
+    .replace(/\\(['"\\])/g, '$1')
+    .replace(/\\[nrt]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function getSeiProcessSubject(link) {
+  const tooltipHandler = link.getAttribute('onmouseover') || '';
+  const match = tooltipHandler.match(
+    /infraTooltipMostrar\(\s*'((?:\\.|[^'])*)'\s*,\s*'((?:\\.|[^'])*)'\s*\)/,
+  );
+
+  if (!match) return null;
+
+  return {
+    description: decodeSeiTooltipText(match[1]),
+    category: decodeSeiTooltipText(match[2]),
+  };
+}
+
+function enrichSeiProcessTable(table) {
+  const groupedHeader = table.querySelector('tr:first-child > th[colspan="3"]');
+
+  if (groupedHeader && !table.querySelector('.ufs-sei-assunto-header')) {
+    const subjectHeader = document.createElement('th');
+    subjectHeader.className = `${groupedHeader.className} ufs-sei-assunto-header`.trim();
+    subjectHeader.scope = 'col';
+    subjectHeader.textContent = 'Assunto';
+    groupedHeader.before(subjectHeader);
+    groupedHeader.colSpan = 2;
+  }
+
+  table.querySelectorAll('tr[id^="P"]').forEach((row) => {
+    const processLink = row.querySelector(
+      'a.processoVisualizado[onmouseover*="infraTooltipMostrar"]',
+    );
+    const subjectCell = row.cells[1];
+    if (!processLink || !subjectCell) return;
+
+    const subject = getSeiProcessSubject(processLink);
+    if (!subject?.category && !subject?.description) return;
+
+    const subjectKey = `${subject.category}\n${subject.description}`;
+    if (subjectCell.dataset.ufsSeiSubject === subjectKey) return;
+
+    const content = document.createElement('div');
+    content.className = 'ufs-sei-assunto';
+
+    const category = document.createElement('strong');
+    category.className = 'ufs-sei-assunto-categoria';
+    category.textContent = subject.category || 'Assunto';
+
+    const description = document.createElement('span');
+    description.className = 'ufs-sei-assunto-descricao';
+    description.textContent = subject.description;
+
+    content.append(category, description);
+    subjectCell.replaceChildren(content);
+    subjectCell.classList.add('ufs-sei-assunto-cell');
+    subjectCell.dataset.ufsSeiSubject = subjectKey;
+  });
+}
+
+function configureSeiProcessSubjects() {
+  if (theme.systemId !== 'sei') return;
+
+  const start = () => {
+    let updateQueued = false;
+    const update = () => {
+      if (updateQueued) return;
+      updateQueued = true;
+      requestAnimationFrame(() => {
+        updateQueued = false;
+        document.querySelectorAll('table.tabelaControle').forEach(enrichSeiProcessTable);
+      });
+    };
+
+    update();
+    new MutationObserver(update).observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start, { once: true });
+  } else {
+    start();
+  }
+}
+
 if (theme) {
-  // O tema permanece ativo por padrão. O estilo mínimo evita o clarão branco
-  // enquanto o CSS de correções e a preferência sincronizada são carregados.
+  if (theme.systemId) {
+    document.documentElement.dataset.ufsThemeSystem = theme.systemId;
+  }
   setThemeEnabled(true);
 
   if (document.readyState === 'loading') {
@@ -315,9 +520,16 @@ if (theme) {
   }
 
   configurePrintMode();
+  configureSeiProcessSubjects();
 
-  chrome.storage.sync.get(theme.storageKey, (result) => {
-    setThemeEnabled(result[theme.storageKey] !== false);
+  const storageKeys = [theme.storageKey];
+  if (theme.legacyStorageKey) storageKeys.push(theme.legacyStorageKey);
+
+  chrome.storage.sync.get(storageKeys, (result) => {
+    const savedValue = result[theme.storageKey]
+      ?? result[theme.legacyStorageKey]
+      ?? true;
+    setThemeEnabled(savedValue !== false);
   });
 
   chrome.storage.onChanged.addListener((changes, areaName) => {

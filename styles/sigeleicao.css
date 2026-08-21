@@ -1,0 +1,37 @@
+
+
+html[data-ufs-theme-system="sigeleicao"] #container {
+  min-height: 393px !important;
+}
+
+html[data-ufs-theme-system="sigeleicao"] #cabecalho:has(#painel-usuario img[src*="/sigeleicao/img/banner"]) {
+  min-height: 123px !important;
+}
+
+html[data-ufs-theme-system="sigeleicao"] #painel-usuario:has(img[src*="/sigeleicao/img/banner"]) {
+  min-height: 102px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background: var(--sigrh-surface-raised) !important;
+}
+
+html[data-ufs-theme-system="sigeleicao"] #painel-usuario .usuario {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html[data-ufs-theme-system="sigeleicao"] #painel-usuario img[src*="/sigeleicao/img/banner"] {
+  display: block !important;
+  width: 100% !important;
+  height: 102px !important;
+  object-fit: cover !important;
+  filter: none !important;
+}
+
+html[data-ufs-theme-system="sigeleicao"] .logon {
+  width: min(600px, 100%) !important;
+}
+
+html[data-ufs-theme-system="sigeleicao"] #conteudo {
+  min-height: 250px !important;
+}

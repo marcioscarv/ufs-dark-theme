@@ -13,7 +13,7 @@
   --ufs-sso-warning: #f1cc63;
   --ufs-sso-warning-border: #8f7226;
 
-  /* Variáveis consumidas pelo design system do SSO. */
+
   --white: var(--ufs-sso-bg);
   --light: var(--ufs-sso-surface);
   --gray: #8b93a6;
@@ -320,7 +320,7 @@ label[disabled],
   }
 }
 
-/* CAS legado: confirmação de login e mensagens de retorno. */
+
 #container {
   width: min(960px, calc(100% - 32px)) !important;
   height: auto !important;

@@ -1,0 +1,88 @@
+
+
+html[data-ufs-theme-system="sigaa"] #loginSobrecargaAviso,
+html[data-ufs-theme-system="sigaa"] #conteudo > div[style*="background"] {
+  background: var(--sigrh-surface-raised) !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+html[data-ufs-theme-system="sigaa"] .cadastro-usuario {
+  box-sizing: border-box !important;
+  padding: 12px !important;
+  color: var(--sigrh-text) !important;
+}
+
+html[data-ufs-theme-system="sigaa"] .cadastro-usuario strong,
+html[data-ufs-theme-system="sigaa"] .cadastro-usuario p {
+  color: inherit !important;
+}
+
+html[data-ufs-theme-system="sigaa"] img[src*="acessibilidade"],
+html[data-ufs-theme-system="sigaa"] img[alt*="Acessibilidade"] {
+  filter: none !important;
+}
+
+html[data-ufs-theme-system="sigaa"] #menu_principal.popup,
+html[data-ufs-theme-system="sigaa"] #disciplinas,
+html[data-ufs-theme-system="sigaa"] #horarios,
+html[data-ufs-theme-system="sigaa"] #botoes,
+html[data-ufs-theme-system="sigaa"] #grade-horarios {
+  background: var(--sigrh-surface-raised) !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+html[data-ufs-theme-system="sigaa"] table.listagem tr.periodo td,
+html[data-ufs-theme-system="sigaa"] table.listagem tr.componente_curricular td,
+html[data-ufs-theme-system="sigaa"] tr.periodo td,
+html[data-ufs-theme-system="sigaa"] tr.disciplina td {
+  background: var(--sigrh-surface-soft) !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+html[data-ufs-theme-system="sigaa"] table.menuMatricula td.operacao,
+html[data-ufs-theme-system="sigaa"] td.botoes,
+html[data-ufs-theme-system="sigaa"] div.botoes {
+  background-color: #202b39 !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+html[data-ufs-theme-system="sigaa"] #menu_principal #modulos li a,
+html[data-ufs-theme-system="sigaa"] #menu_principal #portais li a {
+  background-color: #26374d !important;
+  background-image: none !important;
+  border-top: 1px solid #425675 !important;
+  color: #eef4fc !important;
+  text-shadow: none !important;
+}
+
+html[data-ufs-theme-system="sigaa"] #menu_principal #modulos li.on,
+html[data-ufs-theme-system="sigaa"] #menu_principal #portais li.on {
+  background-color: #29436f !important;
+  box-shadow: inset 0 0 0 1px #5577ad !important;
+}
+
+html[data-ufs-theme-system="sigaa"] #menu_principal #modulos li.on a,
+html[data-ufs-theme-system="sigaa"] #menu_principal #portais li.on a {
+  background-color: #31517f !important;
+  color: #fff !important;
+}
+
+html[data-ufs-theme-system="sigaa"] #menu_principal #modulos li.off,
+html[data-ufs-theme-system="sigaa"] #menu_principal #portais li.off {
+  opacity: 0.72 !important;
+}
+
+html[data-ufs-theme-system="sigaa"] #menu_principal #modulos li.on:hover,
+html[data-ufs-theme-system="sigaa"] #menu_principal #portais li.on:hover {
+  background-color: #354b6d !important;
+  box-shadow: inset 0 0 0 1px var(--sigrh-focus) !important;
+}
+
+html[data-ufs-theme-system="sigaa"] #menu_principal #modulos li.on:hover a,
+html[data-ufs-theme-system="sigaa"] #menu_principal #portais li.on:hover a {
+  background-color: #3a5b87 !important;
+}

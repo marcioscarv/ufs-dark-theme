@@ -1,0 +1,17 @@
+
+
+html[data-ufs-theme-system="resunweb"],
+html[data-ufs-theme-system="resunweb"] body,
+html[data-ufs-theme-system="resunweb"] flutter-view {
+  background: #0b0f14 !important;
+  color-scheme: dark !important;
+}
+
+html[data-ufs-theme-system="resunweb"] flt-glass-pane {
+  filter: invert(92%) hue-rotate(180deg) brightness(62%) contrast(180%) !important;
+}
+
+html[data-ufs-theme-system="resunweb"] flt-semantics-host,
+html[data-ufs-theme-system="resunweb"] flt-text-editing-host {
+  color-scheme: dark !important;
+}

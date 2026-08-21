@@ -1,10 +1,29 @@
 {
   "manifest_version": 3,
   "name": "UFS Dark Theme",
-  "description": "Aplica um tema escuro aos sistemas institucionais GLPI, Polare, SSO e SIGRH da UFS.",
-  "version": "1.3.0",
+  "description": "Aplica um tema escuro aos sistemas institucionais GLPI, Polare, SSO, SEI e SIGs da UFS.",
+  "version": "1.5.0",
   "permissions": ["storage"],
-  "host_permissions": ["*://ufs.br/*", "*://*.ufs.br/*"],
+  "host_permissions": [
+    "*://glpi.ufs.br/*",
+    "*://www.glpi.ufs.br/*",
+    "*://polare.ufs.br/*",
+    "*://www.polare.ufs.br/*",
+    "*://sso.auth.ufs.br/*",
+    "*://www.sso.auth.ufs.br/*",
+    "*://sei.ufs.br/*",
+    "*://www.sei.ufs.br/*",
+    "*://sigrh.ufs.br/*",
+    "*://www.sigrh.ufs.br/*",
+    "*://sigaa.ufs.br/*",
+    "*://www.sigaa.ufs.br/*",
+    "*://sipac.ufs.br/*",
+    "*://www.sipac.ufs.br/*",
+    "*://resunweb.ufs.br/*",
+    "*://www.resunweb.ufs.br/*",
+    "*://sistemas.ufs.br/*",
+    "*://www.sistemas.ufs.br/*"
+  ],
   "background": { "service_worker": "background.js" },
   "action": {
     "default_popup": "popup.html",
@@ -20,8 +39,18 @@
         "*://www.polare.ufs.br/*",
         "*://sso.auth.ufs.br/*",
         "*://www.sso.auth.ufs.br/*",
+        "*://sei.ufs.br/*",
+        "*://www.sei.ufs.br/*",
         "*://sigrh.ufs.br/*",
-        "*://www.sigrh.ufs.br/*"
+        "*://www.sigrh.ufs.br/*",
+        "*://sigaa.ufs.br/*",
+        "*://www.sigaa.ufs.br/*",
+        "*://sipac.ufs.br/*",
+        "*://www.sipac.ufs.br/*",
+        "*://resunweb.ufs.br/*",
+        "*://www.resunweb.ufs.br/*",
+        "*://sistemas.ufs.br/*",
+        "*://www.sistemas.ufs.br/*"
       ],
       "js": ["vendor/theme-engine-proxy.js"],
       "all_frames": true,
@@ -37,8 +66,18 @@
         "*://www.polare.ufs.br/*",
         "*://sso.auth.ufs.br/*",
         "*://www.sso.auth.ufs.br/*",
+        "*://sei.ufs.br/*",
+        "*://www.sei.ufs.br/*",
         "*://sigrh.ufs.br/*",
-        "*://www.sigrh.ufs.br/*"
+        "*://www.sigrh.ufs.br/*",
+        "*://sigaa.ufs.br/*",
+        "*://www.sigaa.ufs.br/*",
+        "*://sipac.ufs.br/*",
+        "*://www.sipac.ufs.br/*",
+        "*://resunweb.ufs.br/*",
+        "*://www.resunweb.ufs.br/*",
+        "*://sistemas.ufs.br/*",
+        "*://www.sistemas.ufs.br/*"
       ],
       "js": ["vendor/theme-engine.js", "content.js"],
       "all_frames": true,
@@ -49,8 +88,39 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["styles/glpi.css", "styles/polare.css", "styles/sso.css", "styles/sigrh.css"],
-      "matches": ["*://glpi.ufs.br/*", "*://www.glpi.ufs.br/*", "*://polare.ufs.br/*", "*://www.polare.ufs.br/*", "*://sso.auth.ufs.br/*", "*://www.sso.auth.ufs.br/*", "*://sigrh.ufs.br/*", "*://www.sigrh.ufs.br/*"]
+      "resources": [
+        "styles/glpi.css",
+        "styles/polare.css",
+        "styles/sso.css",
+        "styles/sei.css",
+        "styles/sigrh.css",
+        "styles/sigaa.css",
+        "styles/sipac.css",
+        "styles/sigadmin.css",
+        "styles/sigeleicao.css",
+        "styles/cxpostal.css",
+        "styles/resunweb.css"
+      ],
+      "matches": [
+        "*://glpi.ufs.br/*",
+        "*://www.glpi.ufs.br/*",
+        "*://polare.ufs.br/*",
+        "*://www.polare.ufs.br/*",
+        "*://sso.auth.ufs.br/*",
+        "*://www.sso.auth.ufs.br/*",
+        "*://sei.ufs.br/*",
+        "*://www.sei.ufs.br/*",
+        "*://sigrh.ufs.br/*",
+        "*://www.sigrh.ufs.br/*",
+        "*://sigaa.ufs.br/*",
+        "*://www.sigaa.ufs.br/*",
+        "*://sipac.ufs.br/*",
+        "*://www.sipac.ufs.br/*",
+        "*://resunweb.ufs.br/*",
+        "*://www.resunweb.ufs.br/*",
+        "*://sistemas.ufs.br/*",
+        "*://www.sistemas.ufs.br/*"
+      ]
     }
   ]
 }

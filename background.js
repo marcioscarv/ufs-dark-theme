@@ -5,8 +5,18 @@ const THEME_HOSTS = new Set([
   'www.polare.ufs.br',
   'sso.auth.ufs.br',
   'www.sso.auth.ufs.br',
+  'sei.ufs.br',
+  'www.sei.ufs.br',
   'sigrh.ufs.br',
   'www.sigrh.ufs.br',
+  'sigaa.ufs.br',
+  'www.sigaa.ufs.br',
+  'sipac.ufs.br',
+  'www.sipac.ufs.br',
+  'resunweb.ufs.br',
+  'www.resunweb.ufs.br',
+  'sistemas.ufs.br',
+  'www.sistemas.ufs.br',
 ]);
 
 function isThemePage(url) {
@@ -21,7 +31,7 @@ function isAllowedResource(url) {
   try {
     const resourceURL = new URL(url);
     return ['http:', 'https:'].includes(resourceURL.protocol)
-      && (resourceURL.hostname === 'ufs.br' || resourceURL.hostname.endsWith('.ufs.br'));
+      && THEME_HOSTS.has(resourceURL.hostname);
   } catch {
     return false;
   }

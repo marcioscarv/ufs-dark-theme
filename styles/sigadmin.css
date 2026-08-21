@@ -1,0 +1,21 @@
+
+
+html[data-ufs-theme-system="sigadmin"] #cabecalho > #menu-principal {
+  box-sizing: border-box !important;
+  background: var(--sigrh-surface-raised) !important;
+  border-bottom: 1px solid var(--sigrh-border) !important;
+}
+
+html[data-ufs-theme-system="sigadmin"] .azulMedio,
+html[data-ufs-theme-system="sigadmin"] .rich-panel,
+html[data-ufs-theme-system="sigadmin"] .rich-panel-body {
+  background: var(--sigrh-surface-raised) !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+html[data-ufs-theme-system="sigadmin"] .rich-panel-header {
+  background: var(--sigrh-brand) !important;
+  border-color: var(--sigrh-border) !important;
+  color: #fff !important;
+}

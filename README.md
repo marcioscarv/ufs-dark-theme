@@ -7,7 +7,8 @@ Extensão para Google Chrome que aplica um tema escuro aos sistemas instituciona
 - GLPI
 - Polare
 - SSO
-- SIGRH
+- SEI
+- SIGs: SIGAA, SIPAC, SIGRH, SIGADMIN, SIGEleição, RESUNWEB e Caixa Postal
 
 ## Instalação local
 
@@ -33,7 +34,7 @@ Se o motor dinâmico não puder ser iniciado, a extensão utiliza automaticament
 
 ![Tela de login do GLPI com o tema escuro](docs/screenshots/glpi-login.png)
 
-### SIGRH
+### SIGs — exemplo no SIGRH
 
 ![Tela de login do SIGRH com o tema escuro](docs/screenshots/sigrh-login.png)
 
@@ -50,7 +51,7 @@ Consulte a [política de privacidade](docs/PRIVACY-POLICY.md) para mais detalhes
 ## Estrutura
 
 - `manifest.json`: configuração Manifest V3.
-- `background.js`: busca restrita de recursos visuais hospedados em domínios da UFS.
+- `background.js`: busca restrita de recursos visuais nos sistemas suportados.
 - `content.js`: integração do motor dinâmico e carregamento das correções.
 - `popup.html` e `popup.js`: painel da extensão.
 - `styles/`: temas específicos de cada sistema.

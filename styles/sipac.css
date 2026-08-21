@@ -1,0 +1,88 @@
+
+
+html[data-ufs-theme-system="sipac"] #conteudo .logon + div,
+html[data-ufs-theme-system="sipac"] #conteudo .logon ~ div {
+  color: var(--sigrh-text) !important;
+}
+
+html[data-ufs-theme-system="sipac"] #conteudo img[src*="firefox"],
+html[data-ufs-theme-system="sipac"] #conteudo img[src*="java"] {
+  filter: none !important;
+}
+
+html[data-ufs-theme-system="sipac"] table.formulario tfoot,
+html[data-ufs-theme-system="sipac"] table.listagem tfoot,
+html[data-ufs-theme-system="sipac"] table.visualizacao tfoot {
+  background: var(--sigrh-surface-soft) !important;
+  color: var(--sigrh-text) !important;
+}
+
+html[data-ufs-theme-system="sipac"] div.menu-botoes,
+html[data-ufs-theme-system="sipac"] div.aba-botoes,
+html[data-ufs-theme-system="sipac"] div.menu-botoes ul.menu-interno,
+html[data-ufs-theme-system="sipac"] div.aba-botoes ul.menu-interno {
+  background-color: var(--sigrh-surface-raised) !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+html[data-ufs-theme-system="sipac"] div.menu-botoes li a,
+html[data-ufs-theme-system="sipac"] div.aba-botoes li a {
+  color: var(--sigrh-text) !important;
+}
+
+html[data-ufs-theme-system="sipac"] div.menu-botoes li a:hover,
+html[data-ufs-theme-system="sipac"] div.menu-botoes li a:focus,
+html[data-ufs-theme-system="sipac"] div.aba-botoes li a:hover,
+html[data-ufs-theme-system="sipac"] div.aba-botoes li a:focus {
+  color: #fff !important;
+  outline: 2px solid var(--sigrh-focus) !important;
+  outline-offset: 1px !important;
+}
+
+
+html[data-ufs-theme-system="sipac"] .ytab-strip,
+html[data-ufs-theme-system="sipac"] .ytab-strip tbody,
+html[data-ufs-theme-system="sipac"] .ytab-strip tr,
+html[data-ufs-theme-system="sipac"] .ytab-strip td {
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
+html[data-ufs-theme-system="sipac"] .ytab-right,
+html[data-ufs-theme-system="sipac"] .ytab-left,
+html[data-ufs-theme-system="sipac"] .ytab-inner {
+  box-sizing: border-box !important;
+  display: block !important;
+  height: 24px !important;
+  background-color: #202b39 !important;
+  background-image: none !important;
+  color: var(--sigrh-text) !important;
+}
+
+html[data-ufs-theme-system="sipac"] .ytab-right {
+  overflow: hidden !important;
+  border: 1px solid var(--sigrh-border) !important;
+  border-radius: 4px 4px 0 0 !important;
+}
+
+html[data-ufs-theme-system="sipac"] .ytab-inner,
+html[data-ufs-theme-system="sipac"] .ytab-text {
+  line-height: 22px !important;
+  color: inherit !important;
+}
+
+html[data-ufs-theme-system="sipac"] .ytab-strip td.on .ytab-right,
+html[data-ufs-theme-system="sipac"] .ytab-strip td.on .ytab-left,
+html[data-ufs-theme-system="sipac"] .ytab-strip td.on .ytab-inner {
+  background-color: var(--sigrh-brand) !important;
+  border-color: #6f91c8 !important;
+  color: #fff !important;
+}
+
+html[data-ufs-theme-system="sipac"] .ytab-strip td:not(.on):hover .ytab-right,
+html[data-ufs-theme-system="sipac"] .ytab-strip td:not(.on):hover .ytab-left,
+html[data-ufs-theme-system="sipac"] .ytab-strip td:not(.on):hover .ytab-inner {
+  background-color: var(--sigrh-brand-hover) !important;
+  color: #fff !important;
+}

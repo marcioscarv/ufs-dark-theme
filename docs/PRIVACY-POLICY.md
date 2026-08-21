@@ -5,8 +5,9 @@
 ## Finalidade
 
 O UFS Dark Theme tem como única finalidade aplicar um tema escuro aos sistemas
-institucionais GLPI, Polare, Portal de Autenticação (SSO) e SIGRH da
-Universidade Federal de Sergipe.
+institucionais GLPI, Polare, Portal de Autenticação (SSO), SEI e a família SIGs da
+Universidade Federal de Sergipe, incluindo SIGAA, SIPAC, SIGRH, SIGADMIN,
+SIGEleição, RESUNWEB e Caixa Postal.
 
 ## Dados coletados
 
@@ -16,7 +17,7 @@ comunicações, localização ou informações financeiras.
 
 ## Preferências armazenadas
 
-A extensão armazena somente quatro valores booleanos que indicam se o tema está
+A extensão armazena somente cinco valores booleanos que indicam se o tema está
 ativado para cada sistema suportado. Essas preferências são mantidas pelo
 `chrome.storage.sync` e podem ser sincronizadas pelo próprio Chrome entre os
 dispositivos do usuário. O desenvolvedor não recebe nem possui acesso a esses
@@ -27,10 +28,10 @@ valores.
 A extensão é executada apenas nos domínios institucionais especificados em seu
 manifesto. O acesso é utilizado exclusivamente para inserir arquivos CSS locais
 e ajustar visualmente componentes dinâmicos. Quando uma folha de estilo ou
-imagem hospedada em um domínio `ufs.br` não pode ser lida diretamente pela
-página, a extensão pode solicitar novamente esse mesmo recurso institucional
-para calcular o tema. Nenhum conteúdo das páginas é armazenado, copiado ou
-enviado ao desenvolvedor ou a terceiros.
+imagem hospedada em um dos domínios suportados não pode ser lida diretamente
+pela página, a extensão pode solicitar novamente esse mesmo recurso
+institucional para calcular o tema. Nenhum conteúdo das páginas é armazenado,
+copiado ou enviado ao desenvolvedor ou a terceiros.
 
 ## Compartilhamento e venda de dados
 
@@ -43,12 +44,12 @@ Todo o código executado pela extensão está contido no pacote instalado. A
 extensão não baixa código remoto, não possui serviço de análise e não se
 comunica com servidores controlados pelo desenvolvedor. As únicas solicitações
 auxiliares permitidas são para recursos visuais já referenciados pelas páginas
-e hospedados em domínios institucionais da UFS.
+e hospedados nos sistemas suportados.
 
 ## Controle do usuário
 
-O usuário pode ativar ou desativar o tema separadamente para cada sistema pelo
-menu da extensão. A remoção da extensão elimina seu acesso às páginas; as
+O usuário pode ativar ou desativar GLPI, Polare, SSO, SEI e a família SIGs pelo menu
+da extensão. A remoção da extensão elimina seu acesso às páginas; as
 preferências sincronizadas são administradas pelo próprio Chrome e pela conta
 do usuário.
 

@@ -1,10 +1,10 @@
-/* ========================================= */
-/*          POLARE DARK MODE FULL            */
-/* ========================================= */
+
+
+
 
 :root {
 
-  /* ===== Base Dark Palette ===== */
+
   --white: #121417;
   --light: #1c1f26;
   --gray: #8b93a6;
@@ -31,20 +31,20 @@
   --bg-custom-dropdown: #232730;
   --text-custom-dropdown: #e4e8f0;
 
-  /* Header */
+
   --header-bg-color: #181b21;
 
-  /* Pequeno ajuste no verde para contraste */
+
   --primary-light-color: #9fe870;
 }
 
 html[paleta=social] {
-    --primary-light-color: #85cc3d;  
+    --primary-light-color: #85cc3d;
 }
 
-/* ========================================= */
-/* BODY & HTML                              */
-/* ========================================= */
+
+
+
 
 html,
 body {
@@ -52,7 +52,7 @@ body {
   color: var(--text-color) !important;
 }
 
-/* Remove qualquer fundo branco herdado */
+
 .bg-white,
 .bg-light,
 .background-white,
@@ -60,9 +60,9 @@ body {
   background-color: #1c1f26 !important;
 }
 
-/* ========================================= */
-/* HEADER SUPERIOR                          */
-/* ========================================= */
+
+
+
 
 .header,
 .navbar,
@@ -101,7 +101,7 @@ header {
 
 .form-group .combo {
     display: block;
-    position: relative;  
+    position: relative;
     --combobox-option-selected-bg-color: #3f533b;
     --combobox-option-hover-bg-color: #3f533b;
 }
@@ -121,15 +121,15 @@ header {
     z-index: 9999;
 }
 
-/* Barra Brasil topo */
+
 .barra-brasil,
 #barra-brasil {
   background-color: #0f1115 !important;
 }
 
-/* ========================================= */
-/* MENU LATERAL                             */
-/* ========================================= */
+
+
+
 
 .menu-lateral {
   background: linear-gradient(180deg, #14171d, #181b21) !important;
@@ -146,9 +146,9 @@ header {
   color: var(--primary-color) !important;
 }
 
-/* ========================================= */
-/* CONTEÚDO CENTRAL                         */
-/* ========================================= */
+
+
+
 
 .container-conteudo,
 .container,
@@ -159,9 +159,9 @@ header {
   color: var(--text-color) !important;
 }
 
-/* ========================================= */
-/* CARDS                                    */
-/* ========================================= */
+
+
+
 
 .card {
   border: 1px solid #2c313c !important;
@@ -177,9 +177,9 @@ header {
   background-color: #1c1f26 !important;
 }
 
-/* ========================================= */
-/* BOTÕES                                   */
-/* ========================================= */
+
+
+
 
 .btn-dark,
 .btn-secondary {
@@ -192,9 +192,9 @@ header {
   background-color: #2c313c !important;
 }
 
-/* ========================================= */
-/* INPUTS                                   */
-/* ========================================= */
+
+
+
 
 input,
 select,
@@ -210,9 +210,9 @@ textarea::placeholder {
   color: #8b93a6 !important;
 }
 
-/* ========================================= */
-/* DROPDOWNS                                */
-/* ========================================= */
+
+
+
 
 .dropdown-menu {
   background-color: #232730 !important;
@@ -227,9 +227,9 @@ textarea::placeholder {
   background-color: #2c313c !important;
 }
 
-/* ========================================= */
-/* TABELAS                                  */
-/* ========================================= */
+
+
+
 
 table {
   background-color: #1c1f26 !important;
@@ -244,18 +244,18 @@ tr:nth-child(even) {
   background-color: #181b21 !important;
 }
 
-/* ========================================= */
-/* MODAIS                                   */
-/* ========================================= */
+
+
+
 
 .modal-content {
   background-color: #1c1f26 !important;
   border: 1px solid #2c313c !important;
 }
 
-/* ========================================= */
-/* GRADIENTE HOME                           */
-/* ========================================= */
+
+
+
 
 .gradiente:before {
   background: linear-gradient(
@@ -265,18 +265,18 @@ tr:nth-child(even) {
   ) !important;
 }
 
-/* ========================================= */
-/* TOOLTIP                                  */
-/* ========================================= */
+
+
+
 
 .tooltip-inner {
   background-color: #232730 !important;
   color: #e4e8f0 !important;
 }
 
-/* ========================================= */
-/* SCROLLBAR                                */
-/* ========================================= */
+
+
+
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -295,9 +295,9 @@ tr:nth-child(even) {
   background: #353b47;
 }
 
-/* ========================================= */
-/* FORÇA FINAL CONTRA BRANCOS HARD-CODED    */
-/* ========================================= */
+
+
+
 
 div[style*="background-color: #fff"],
 div[style*="background:#fff"],
@@ -306,7 +306,7 @@ section[style*="background-color: #fff"] {
   background-color: #1c1f26 !important;
 }
 
-/* Refinamento visual do Polare ------------------------------------------ */
+
 
 :root {
   color-scheme: dark;
@@ -529,7 +529,7 @@ textarea:disabled {
   border-color: #416d35 !important;
 }
 
-/* Calendário do design system. */
+
 .datepicker__modal__wrapper {
   background: var(--polare-surface-2) !important;
   color: var(--polare-text) !important;
@@ -600,7 +600,7 @@ textarea:disabled {
   border-top: 1px solid var(--polare-border) !important;
 }
 
-/* Tela de entrada pública. */
+
 .conteudo-principal.p-4:has(.link-auth) {
   width: 410px !important;
   max-width: calc(100vw - 32px);
@@ -662,7 +662,7 @@ a[href="https://polare.ufs.br/publico"]:hover {
   color: #b9f58f !important;
 }
 
-/* Consentimento de cookies. */
+
 .cookies-consent-dialog {
   height: auto !important;
   min-height: 0 !important;

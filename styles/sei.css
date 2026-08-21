@@ -1,0 +1,419 @@
+:root {
+  color-scheme: dark;
+  --sei-bg: #0b1118;
+  --sei-surface: #131c27;
+  --sei-surface-raised: #1a2634;
+  --sei-surface-soft: #223142;
+  --sei-border: #34485f;
+  --sei-brand: #1b2f62;
+  --sei-brand-strong: #294777;
+  --sei-text: #e7eef7;
+  --sei-muted: #aebed0;
+  --sei-link: #75c8ef;
+  --sei-hover: #294259;
+  --sei-focus: #62c7f2;
+}
+
+html,
+body,
+#divInfraAreaGlobal,
+#divInfraAreaTela,
+#divInfraAreaTelaD {
+  background: var(--sei-bg) !important;
+  color: var(--sei-text) !important;
+}
+
+body {
+  background-image: linear-gradient(145deg, #0b1118 0%, #101a25 100%) !important;
+}
+
+a {
+  color: var(--sei-link) !important;
+}
+
+a:hover,
+a:focus {
+  color: #b4e5fb !important;
+}
+
+
+#navInfraBarraNavegacao,
+#divInfraBarraSistemaPadrao,
+.infraCorBarraSistema {
+  background-color: var(--sei-brand) !important;
+  background-image: none !important;
+}
+
+.infraCorBarraSuperior {
+  background-color: var(--sei-brand-strong) !important;
+  background-image: none !important;
+}
+
+#navInfraBarraNavegacao,
+#navInfraBarraNavegacao a,
+#navInfraBarraNavegacao span,
+#navInfraBarraNavegacao h6,
+#divInfraBarraSistemaPadrao,
+#divInfraBarraSistemaPadrao a,
+#divInfraBarraSistemaPadrao span {
+  color: #fff !important;
+}
+
+#lnkInfraUnidade,
+#spnInfraUnidade {
+  min-height: 30px !important;
+  background: rgba(7, 25, 39, 0.48) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #fff !important;
+}
+
+
+#frmLogin,
+#area-cards-login {
+  color: var(--sei-text) !important;
+}
+
+#area-cards-login .card {
+  background: var(--sei-surface) !important;
+  border: 1px solid var(--sei-border) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.42) !important;
+}
+
+#area-cards-login .card-body {
+  background: transparent !important;
+}
+
+#area-cards-login .input-group-text {
+  background: var(--sei-surface-soft) !important;
+  border-color: var(--sei-border) !important;
+  color: var(--sei-muted) !important;
+}
+
+#Acessar {
+  background: var(--sei-brand-strong) !important;
+  border-color: #2c7db2 !important;
+  color: #fff !important;
+}
+
+#Acessar:hover,
+#Acessar:focus {
+  background: #3a5693 !important;
+  box-shadow: 0 0 0 3px rgba(98, 199, 242, 0.22) !important;
+}
+
+
+#divInfraAreaTelaE,
+#divInfraPesquisarMenu,
+#divInfraSidebarMenu {
+  background: #071b24 !important;
+  color: var(--sei-text) !important;
+}
+
+#txtInfraPesquisarMenu {
+  background: #0d1823 !important;
+  border-color: #426077 !important;
+  color: var(--sei-text) !important;
+}
+
+#infraMenu,
+#infraMenu ul,
+#infraMenu li,
+#infraMenu button,
+#infraMenu a {
+  color: var(--sei-text) !important;
+}
+
+#infraMenu a,
+#infraMenu button {
+  border-radius: 4px !important;
+}
+
+#infraMenu a:hover,
+#infraMenu a:focus,
+#infraMenu button:hover,
+#infraMenu button:focus,
+#infraMenu .active > a,
+#infraMenu .active > button {
+  background: var(--sei-hover) !important;
+  color: #fff !important;
+  outline: none !important;
+}
+
+#infraMenu .collapse,
+#infraMenu [id^="submenu"] {
+  background: #0c2531 !important;
+  color: var(--sei-text) !important;
+}
+
+
+#divControleProcessosConteudo,
+#divTabelaProcesso,
+.infraAreaTabela,
+.infraAreaPaginacao,
+#divFiltro {
+  color: var(--sei-text) !important;
+}
+
+#divComandos,
+.barraBotoesSEI {
+  background: var(--sei-surface) !important;
+  border: 1px solid var(--sei-border) !important;
+  border-radius: 7px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28) !important;
+}
+
+.infraBarraAcesso,
+.infraBarraLocalizacao {
+  color: var(--sei-muted) !important;
+}
+
+
+.infraTable,
+.infraTable tbody,
+.infraTable td,
+.tabelaControle,
+.tabelaControle tbody,
+.tabelaControle td {
+  background-color: var(--sei-surface) !important;
+  border-color: var(--sei-border) !important;
+  color: var(--sei-text) !important;
+}
+
+.infraTable th,
+.infraTable thead td,
+.infraTh {
+  background: var(--sei-brand-strong) !important;
+  border-color: #39719a !important;
+  color: #fff !important;
+}
+
+.infraTrClara,
+.infraTrClara > td {
+  background: #141e29 !important;
+  color: var(--sei-text) !important;
+}
+
+.infraTrEscura,
+.infraTrEscura > td,
+.infraTable tbody tr:nth-child(even) > td {
+  background: #1a2633 !important;
+  color: var(--sei-text) !important;
+}
+
+.infraTable tbody tr:hover > td,
+.tabelaControle tbody tr:hover > td {
+  background: #263b4e !important;
+}
+
+.infraTable caption,
+.infraAreaPaginacao {
+  color: var(--sei-muted) !important;
+}
+
+
+.tabelaControle {
+  width: 100% !important;
+  table-layout: fixed !important;
+}
+
+.ufs-sei-assunto-header {
+  width: 42% !important;
+  text-align: left !important;
+  padding-left: 12px !important;
+}
+
+.ufs-sei-assunto-cell {
+  width: 42% !important;
+  padding: 7px 12px !important;
+  text-align: left !important;
+  vertical-align: middle !important;
+}
+
+.ufs-sei-assunto {
+  display: flex !important;
+  min-width: 0 !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+  line-height: 1.25 !important;
+}
+
+.ufs-sei-assunto-categoria {
+  overflow: hidden !important;
+  color: #a9c4f6 !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.ufs-sei-assunto-descricao {
+  display: -webkit-box !important;
+  overflow: hidden !important;
+  color: var(--sei-text) !important;
+  font-size: 12px !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 2 !important;
+}
+
+a.processoVisualizado::before {
+  display: inline-block !important;
+  width: 14px !important;
+  height: 14px !important;
+  margin-right: 6px !important;
+  background-color: currentColor !important;
+  content: "" !important;
+  vertical-align: -2px !important;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71'/%3E%3Cpath d='M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71'/%3E%3C/svg%3E") center / contain no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71'/%3E%3Cpath d='M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71'/%3E%3C/svg%3E") center / contain no-repeat !important;
+}
+
+a.processoVisualizado:hover::before,
+a.processoVisualizado:focus::before {
+  transform: scale(1.08) !important;
+}
+
+#divTabelaProcesso:not(:has(#divGerados table)) #divRecebidos {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+#divTabelaProcesso:not(:has(#divGerados table)) #divGerados {
+  display: none !important;
+}
+
+#divRecebidos,
+#divRecebidosAreaTabela,
+#tblProcessosRecebidos {
+  width: 100% !important;
+}
+
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="image"]),
+select,
+textarea,
+.form-control,
+.dd-select,
+.ms-choice,
+.ms-drop {
+  background: #0d1823 !important;
+  border-color: var(--sei-border) !important;
+  color: var(--sei-text) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #8294a8 !important;
+  opacity: 1 !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--sei-text) !important;
+  box-shadow: 0 0 0 1000px #142238 inset !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+.form-control:focus {
+  border-color: var(--sei-focus) !important;
+  box-shadow: 0 0 0 3px rgba(98, 199, 242, 0.18) !important;
+}
+
+.btn,
+button,
+input[type="button"],
+input[type="submit"] {
+  border-color: #47647f !important;
+}
+
+.btn-secondary,
+.infraButton:not(.infraCorBarraSistema),
+button:not(.infraCorBarraSistema) {
+  background-color: var(--sei-surface-soft) !important;
+  color: var(--sei-text) !important;
+}
+
+.btn:hover,
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  filter: brightness(1.15) !important;
+}
+
+
+.modal-content,
+.modal-header,
+.modal-body,
+.modal-footer,
+.ui-dialog,
+.ui-dialog-content,
+.ui-widget-content,
+.infraJanelaModal,
+.infraAreaDados,
+.infraTooltip,
+.ms-drop,
+.dd-options {
+  background: var(--sei-surface-raised) !important;
+  border-color: var(--sei-border) !important;
+  color: var(--sei-text) !important;
+}
+
+.modal-header,
+.ui-dialog-titlebar,
+.infraTituloTabela,
+.infraTituloMenu {
+  background: var(--sei-surface-soft) !important;
+  border-color: var(--sei-border) !important;
+  color: var(--sei-text) !important;
+}
+
+.ui-datepicker,
+.infraCalendario,
+.infraCalendario table,
+.infraCalendario td,
+.infraCalendario th {
+  background: var(--sei-surface-raised) !important;
+  border-color: var(--sei-border) !important;
+  color: var(--sei-text) !important;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default {
+  background: var(--sei-surface-soft) !important;
+  border-color: var(--sei-border) !important;
+  color: var(--sei-text) !important;
+}
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-state-active,
+.ui-widget-content .ui-state-active {
+  background: var(--sei-hover) !important;
+  border-color: var(--sei-focus) !important;
+  color: #fff !important;
+}
+
+.alert,
+.infraAviso,
+.infraInformacao {
+  background: #26313d !important;
+  border-color: #52657a !important;
+  color: var(--sei-text) !important;
+}
+
+hr {
+  border-color: var(--sei-border) !important;
+}
+
+@media print {
+  html,
+  body {
+    color-scheme: light !important;
+    background: #fff !important;
+    color: #000 !important;
+  }
+}
