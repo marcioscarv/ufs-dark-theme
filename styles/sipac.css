@@ -40,6 +40,45 @@ html[data-ufs-theme-system="sipac"] div.aba-botoes li a:focus {
   outline-offset: 1px !important;
 }
 
+html[data-ufs-theme-system="sipac"] #noticias-portal {
+  box-sizing: border-box !important;
+  width: calc(100% - 212px) !important;
+  max-width: calc(100% - 212px) !important;
+}
+
+html[data-ufs-theme-system="sipac"] #menubaradm > .menu--linha > a {
+  background-color: var(--sigrh-surface-raised) !important;
+  color: var(--sigrh-text) !important;
+}
+
+html[data-ufs-theme-system="sipac"] #menubaradm > .menu--linha:hover > a,
+html[data-ufs-theme-system="sipac"] #menubaradm > .menu--linha:focus-within > a,
+html[data-ufs-theme-system="sipac"] #menubaradm > .menu--linha > a[aria-expanded="true"] {
+  background-color: #3f68aa !important;
+  box-shadow: inset 0 -3px 0 #9bc4ff !important;
+  color: #fff !important;
+}
+
+html[data-ufs-theme-system="sipac"] #menubaradm .menu--linha > ul,
+html[data-ufs-theme-system="sipac"] #menubaradm .menuitem--linha > ul {
+  background-color: var(--sigrh-surface-raised) !important;
+  border: 1px solid var(--sigrh-border) !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.38) !important;
+}
+
+html[data-ufs-theme-system="sipac"] #menubaradm .menuitem--linha,
+html[data-ufs-theme-system="sipac"] #menubaradm .menuitem--linha > a {
+  background-color: #18212c !important;
+  color: var(--sigrh-text) !important;
+}
+
+html[data-ufs-theme-system="sipac"] #menubaradm .menuitem--linha:hover > a,
+html[data-ufs-theme-system="sipac"] #menubaradm .menuitem--linha:focus-within > a,
+html[data-ufs-theme-system="sipac"] #menubaradm .menuitem--linha > a[aria-expanded="true"] {
+  background-color: #456fae !important;
+  box-shadow: inset 3px 0 0 #a8ceff !important;
+  color: #fff !important;
+}
 
 html[data-ufs-theme-system="sipac"] .ytab-strip,
 html[data-ufs-theme-system="sipac"] .ytab-strip tbody,

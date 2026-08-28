@@ -10,6 +10,21 @@ html[data-ufs-theme-system="cxpostal"] #container {
   margin-bottom: 48px !important;
 }
 
+html[data-ufs-theme-system="cxpostal"] #cabecalho {
+  min-height: 0 !important;
+}
+
+html[data-ufs-theme-system="cxpostal"] #painel-usuario {
+  height: auto !important;
+  min-height: 25px !important;
+}
+
+html[data-ufs-theme-system="cxpostal"] #menu-usuario,
+html[data-ufs-theme-system="cxpostal"] #menu-usuario ul {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
 html[data-ufs-theme-system="cxpostal"] #form {
   box-sizing: border-box !important;
   padding: 16px 20px 24px !important;
@@ -17,6 +32,10 @@ html[data-ufs-theme-system="cxpostal"] #form {
 
 html[data-ufs-theme-system="cxpostal"] #form table {
   max-width: 100% !important;
+}
+
+html[data-ufs-theme-system="cxpostal"] #form td.conteudo span[style*="white-space: pre-wrap"] {
+  white-space: normal !important;
 }
 
 
@@ -32,6 +51,7 @@ html[data-ufs-theme-system="cxpostal"] #pastas ul {
 
 html[data-ufs-theme-system="cxpostal"] #pastas li {
   float: none !important;
+  position: static !important;
   display: flex !important;
   align-items: center !important;
   width: auto !important;
@@ -73,6 +93,7 @@ html[data-ufs-theme-system="cxpostal"] #pastas li > a {
   font-weight: 600 !important;
   line-height: 1.2 !important;
   text-decoration: none !important;
+  white-space: nowrap !important;
 }
 
 html[data-ufs-theme-system="cxpostal"] #pastas li > a:hover,

@@ -67,6 +67,66 @@ a:focus {
   color: #fff !important;
 }
 
+#frmProtocoloPesquisaRapida {
+  display: flex !important;
+  height: 32px !important;
+  margin: 0 8px !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+}
+
+#frmProtocoloPesquisaRapida .input-group {
+  display: flex !important;
+  height: 32px !important;
+  margin: 0 !important;
+  align-items: stretch !important;
+  flex-wrap: nowrap !important;
+}
+
+#frmProtocoloPesquisaRapida input.form-control {
+  box-sizing: border-box !important;
+  height: 32px !important;
+  margin: 0 !important;
+  padding: 5px 10px !important;
+  border-right: 0 !important;
+  border-radius: 4px 0 0 4px !important;
+  line-height: 20px !important;
+}
+
+#frmProtocoloPesquisaRapida .input-group-append,
+#frmProtocoloPesquisaRapida .input-group-prepend {
+  display: flex !important;
+  height: 32px !important;
+  margin: 0 !important;
+  align-items: stretch !important;
+}
+
+#frmProtocoloPesquisaRapida .btn,
+#frmProtocoloPesquisaRapida a,
+#frmProtocoloPesquisaRapida .input-group-text {
+  box-sizing: border-box !important;
+  display: inline-flex !important;
+  width: 34px !important;
+  min-width: 34px !important;
+  height: 32px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: var(--sei-brand-strong) !important;
+  border: 1px solid var(--sei-border) !important;
+  border-left: 0 !important;
+  border-radius: 0 4px 4px 0 !important;
+  line-height: 1 !important;
+}
+
+#frmProtocoloPesquisaRapida img {
+  display: block !important;
+  width: 16px !important;
+  height: 16px !important;
+  margin: 0 !important;
+}
+
 
 #frmLogin,
 #area-cards-login {

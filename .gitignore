@@ -1,3 +1,9 @@
 dist/
+release/
+store-assets/
+tools/
+*.zip
+/AGENTS.md
+/*.png
 *.bkp.*
 *.backup.*

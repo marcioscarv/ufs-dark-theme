@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "UFS Dark Theme",
-  "description": "Aplica um tema escuro aos sistemas institucionais GLPI, Polare, SSO, SEI e SIGs da UFS.",
-  "version": "1.5.0",
+  "description": "Aplica um tema escuro aos principais sistemas institucionais da Universidade Federal de Sergipe.",
+  "version": "1.5.2",
   "permissions": ["storage"],
   "host_permissions": [
     "*://glpi.ufs.br/*",
@@ -79,7 +79,7 @@
         "*://sistemas.ufs.br/*",
         "*://www.sistemas.ufs.br/*"
       ],
-      "js": ["vendor/theme-engine.js", "content.js"],
+      "js": ["preload.js", "vendor/theme-engine.js", "content.js"],
       "all_frames": true,
       "match_about_blank": true,
       "run_at": "document_start",

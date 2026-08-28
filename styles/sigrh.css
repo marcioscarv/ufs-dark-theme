@@ -379,6 +379,26 @@ button:hover,
   color: #fff !important;
 }
 
+#container:has(#menu-dropdown),
+#container-inner:has(#menu-dropdown),
+#conteudo:has(#menu-dropdown),
+#menu-dropdown,
+#menu-dropdown .wrapper,
+#menu-dropdown nav,
+#menubaradm {
+  overflow: visible !important;
+}
+
+#menu-dropdown {
+  position: relative !important;
+  z-index: 1000 !important;
+}
+
+#menubaradm li,
+#menubaradm li > ul {
+  z-index: 1100 !important;
+}
+
 
 #cabecalho {
   height: auto !important;
@@ -1304,7 +1324,246 @@ td.azulMedio,
 #container:has(> #container-inner > #corpo) > #container-inner > #cabecalho {
   height: 81px !important;
   min-height: 81px !important;
+  background: #172235 !important;
   border-color: var(--sigrh-border) !important;
+}
+
+#container:has(> #container-inner > #corpo) #cabecalho #logo,
+#container:has(> #container-inner > #corpo) #cabecalho #identificacao,
+#container:has(> #container-inner > #corpo) #cabecalho #home,
+#container:has(> #container-inner > #corpo) #cabecalho #acesso,
+#container:has(> #container-inner > #corpo) #cabecalho #acesso ul,
+#container:has(> #container-inner > #corpo) #cabecalho #acesso li,
+#container:has(> #container-inner > #corpo) #cabecalho #acesso a {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+#container:has(> #container-inner > #corpo) #cabecalho #logo {
+  background: #172235 !important;
+}
+
+#container:has(> #container-inner > #corpo) #cabecalho #logo img {
+  filter: none !important;
+}
+
+#container:has(> #container-inner > #corpo) #cabecalho #identificacao {
+  background: linear-gradient(180deg, #263d66 0 25px, #172235 25px 100%) !important;
+}
+
+#container:has(> #container-inner > #corpo) #cabecalho #home {
+  position: relative !important;
+  display: block !important;
+  height: 55px !important;
+  color: transparent !important;
+  text-decoration: none !important;
+}
+
+#container:has(> #container-inner > #corpo) #cabecalho #home::before,
+#container:has(> #container-inner > #corpo) #cabecalho #home::after {
+  position: absolute !important;
+  left: 0 !important;
+  display: block !important;
+  color: #f4f7fb !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55) !important;
+}
+
+#container:has(> #container-inner > #corpo) #cabecalho #home::before {
+  top: 1px !important;
+  font-size: 29px !important;
+  font-weight: 700 !important;
+  line-height: 31px !important;
+  letter-spacing: 0.5px !important;
+}
+
+#container:has(> #container-inner > #corpo) #cabecalho #home::after {
+  top: 32px !important;
+  color: #d7e1ef !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 17px !important;
+}
+
+html[data-ufs-theme-system="sigaa"] #container:has(> #container-inner > #corpo) #home::before {
+  content: "SIGAA" !important;
+}
+
+html[data-ufs-theme-system="sigaa"] #container:has(> #container-inner > #corpo) #home::after {
+  content: "Sistema Integrado de Gestão de Atividades Acadêmicas" !important;
+}
+
+html[data-ufs-theme-system="sigrh"] #container:has(> #container-inner > #corpo) #home::before {
+  content: "SIGRH" !important;
+}
+
+html[data-ufs-theme-system="sigrh"] #container:has(> #container-inner > #corpo) #home::after {
+  content: "Sistema Integrado de Gestão de Recursos Humanos" !important;
+}
+
+html[data-ufs-theme-system="sipac"] #container:has(> #container-inner > #corpo) #home::before {
+  content: "SIPAC" !important;
+}
+
+html[data-ufs-theme-system="sipac"] #container:has(> #container-inner > #corpo) #home::after {
+  content: "Sistema Integrado de Patrimônio, Administração e Contratos" !important;
+}
+
+#container:has(> #container-inner > #corpo) #cabecalho #acesso {
+  box-sizing: border-box !important;
+  top: 30px !important;
+  right: 10px !important;
+  width: 218px !important;
+  height: 42px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 1px solid #5577ad !important;
+  border-radius: 5px !important;
+  background: #263d66 !important;
+  box-shadow: none !important;
+}
+
+#container:has(> #container-inner > #corpo) #cabecalho #identificacao > div:not(#acesso) {
+  position: absolute !important;
+  top: 30px !important;
+  right: 236px !important;
+  width: 145px !important;
+  height: 38px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 2 !important;
+}
+
+#container:has(> #container-inner > #corpo) #cabecalho #identificacao > div:not(#acesso) ul,
+#container:has(> #container-inner > #corpo) #cabecalho #identificacao > div:not(#acesso) li {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  list-style: none !important;
+}
+
+#container:has(> #container-inner > #corpo) #cabecalho #identificacao > div:not(#acesso) a {
+  display: flex !important;
+  align-items: center !important;
+  color: #a9c7f2 !important;
+  line-height: 13px !important;
+  text-decoration: none !important;
+}
+
+#container:has(> #container-inner > #corpo) #cabecalho #identificacao > div:not(#acesso) a:hover,
+#container:has(> #container-inner > #corpo) #cabecalho #identificacao > div:not(#acesso) a:focus {
+  color: #fff !important;
+}
+
+#container:has(> #container-inner > #corpo) #cabecalho #acesso ul {
+  box-sizing: border-box !important;
+  display: block !important;
+  width: 100% !important;
+  height: 40px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#container:has(> #container-inner > #corpo) #cabecalho #acesso li.acesso_esq_bg,
+#container:has(> #container-inner > #corpo) #cabecalho #acesso li.acesso_dir_bg {
+  display: none !important;
+}
+
+#container:has(> #container-inner > #corpo) #cabecalho #acesso li.acesso_centro_bg {
+  box-sizing: border-box !important;
+  display: block !important;
+  width: 100% !important;
+  height: 40px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#container:has(> #container-inner > #corpo) #cabecalho #acesso a {
+  box-sizing: border-box !important;
+  display: flex !important;
+  width: 100% !important;
+  height: 40px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #f4f7fb !important;
+  font-weight: 700 !important;
+  text-shadow: none !important;
+}
+
+#container:has(> #container-inner > #corpo) #cabecalho #acesso a::before {
+  content: "\2192" !important;
+  margin-right: 8px !important;
+  color: #7fc7ff !important;
+  font-size: 17px !important;
+  line-height: 1 !important;
+}
+
+#container:has(> #container-inner > #corpo) #cabecalho #acesso:hover {
+  background: #31517f !important;
+  border-color: #78a9ff !important;
+}
+
+div.aba ul,
+div.aba li,
+div.aba li > a,
+.tabPanel,
+.tabPanel td,
+.tabPanel span,
+.rich-tab-header,
+.rich-tab-inactive,
+.rich-tab-active,
+.rich-tab-disabled {
+  background-color: var(--sigrh-surface-soft) !important;
+  background-image: none !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+div.aba li.ativo,
+div.aba li.ativo > a,
+div.aba li.selected,
+div.aba li.selected > a,
+.tabPanel a.ajaxCurrentTab,
+.rich-tab-active {
+  background-color: var(--sigrh-brand) !important;
+  color: #fff !important;
+}
+
+.ytab-strip,
+.ytab-strip tbody,
+.ytab-strip tr,
+.ytab-strip td,
+.ytab-strip .ytab-right,
+.ytab-strip .ytab-left,
+.ytab-strip .ytab-inner,
+.ytab-strip .ytab-text {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+.ytab-strip .ytab-right {
+  box-sizing: border-box !important;
+  border: 1px solid var(--sigrh-border) !important;
+  border-bottom: 0 !important;
+  border-radius: 4px 4px 0 0 !important;
+  background: var(--sigrh-surface-soft) !important;
+  color: var(--sigrh-text) !important;
+}
+
+.ytab-strip td.on .ytab-right,
+.ytab-strip .on .ytab-right {
+  background: var(--sigrh-brand) !important;
+  border-color: #668ed0 !important;
+}
+
+.ytab-strip .ytab-text {
+  color: var(--sigrh-text) !important;
+}
+
+.ytab-strip td.on .ytab-text,
+.ytab-strip .on .ytab-text {
+  color: #fff !important;
+  font-weight: 700 !important;
 }
 
 #corpo {

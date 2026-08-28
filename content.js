@@ -69,6 +69,32 @@ const THEMES = Object.freeze({
   },
 });
 
+const SIG_ROUTE_HOSTS = new Set([
+  'sigrh.ufs.br',
+  'www.sigrh.ufs.br',
+  'sigaa.ufs.br',
+  'www.sigaa.ufs.br',
+  'sipac.ufs.br',
+  'www.sipac.ufs.br',
+  'resunweb.ufs.br',
+  'www.resunweb.ufs.br',
+  'sistemas.ufs.br',
+  'www.sistemas.ufs.br',
+]);
+
+const SIG_ROUTE_THEMES = Object.freeze({
+  sigrh: { cssFiles: [SIGS_BASE_CSS], systemId: 'sigrh' },
+  sigaa: { cssFiles: [SIGS_BASE_CSS, 'styles/sigaa.css'], systemId: 'sigaa' },
+  sipac: { cssFiles: [SIGS_BASE_CSS, 'styles/sipac.css'], systemId: 'sipac' },
+  sigadmin: { cssFiles: [SIGS_BASE_CSS, 'styles/sigadmin.css'], systemId: 'sigadmin' },
+  sigeleicao: {
+    cssFiles: [SIGS_BASE_CSS, 'styles/sigeleicao.css'],
+    systemId: 'sigeleicao',
+  },
+  cxpostal: { cssFiles: [SIGS_BASE_CSS, 'styles/cxpostal.css'], systemId: 'cxpostal' },
+  resunweb: { cssFiles: ['styles/resunweb.css'], systemId: 'resunweb' },
+});
+
 const DYNAMIC_THEME = Object.freeze({
   mode: 1,
   brightness: 100,
@@ -86,37 +112,36 @@ const LEGACY_THEME_LINK_ID = 'ufs-dark-theme';
 const FALLBACK_STYLE_ID = 'ufs-dark-theme-fallback';
 const EDITOR_STYLE_ID = 'ufs-dark-editor-theme';
 const EXTENSION_VERSION = chrome.runtime.getManifest().version;
+
+function resolveRoutedSigTheme() {
+  if (!SIG_ROUTE_HOSTS.has(window.location.hostname)) return undefined;
+
+  const route = window.location.pathname.split('/').find(Boolean)?.toLowerCase();
+  const routeTheme = SIG_ROUTE_THEMES[route];
+  if (!routeTheme) return undefined;
+
+  return {
+    storageKey: SIGS_STORAGE_KEY,
+    legacyStorageKey: 'sigrh_dark',
+    ...routeTheme,
+  };
+}
+
 function resolveTheme() {
+  const routedTheme = resolveRoutedSigTheme();
+  if (routedTheme) return routedTheme;
+
   const currentTheme = THEMES[window.location.hostname];
   if (currentTheme) return currentTheme;
 
   const isSistemasUFS = SISTEMAS_UFS_HOSTS.has(window.location.hostname);
   if (!isSistemasUFS) return undefined;
 
-  const isSigEleicao = window.location.pathname === '/sigeleicao'
-    || window.location.pathname.startsWith('/sigeleicao/');
-  const isCxPostal = window.location.pathname === '/cxpostal'
-    || window.location.pathname.startsWith('/cxpostal/');
-
-  let systemId = 'sigadmin';
-  let systemCSS = 'styles/sigadmin.css';
-
-  if (isSigEleicao) {
-    systemId = 'sigeleicao';
-    systemCSS = 'styles/sigeleicao.css';
-  } else if (isCxPostal) {
-    systemId = 'cxpostal';
-    systemCSS = 'styles/cxpostal.css';
-  }
-
   return {
     storageKey: SIGS_STORAGE_KEY,
     legacyStorageKey: 'sigrh_dark',
-    cssFiles: [
-      SIGS_BASE_CSS,
-      systemCSS,
-    ],
-    systemId,
+    cssFiles: [SIGS_BASE_CSS, 'styles/sigadmin.css'],
+    systemId: 'sigadmin',
   };
 }
 

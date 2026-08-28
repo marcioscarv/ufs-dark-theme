@@ -86,3 +86,68 @@ html[data-ufs-theme-system="sigaa"] #menu_principal #modulos li.on:hover a,
 html[data-ufs-theme-system="sigaa"] #menu_principal #portais li.on:hover a {
   background-color: #3a5b87 !important;
 }
+
+html[data-ufs-theme-system="sigaa"] #colDirTop {
+  background-color: #243a5e !important;
+  background-image: linear-gradient(180deg, #2d4b79 0%, #203653 100%) !important;
+  border-color: var(--sigrh-border) !important;
+  color: var(--sigrh-text) !important;
+}
+
+html[data-ufs-theme-system="sigaa"] #colDirTop h1,
+html[data-ufs-theme-system="sigaa"] #colDirTop h2,
+html[data-ufs-theme-system="sigaa"] #colDirTop a {
+  color: #dce9fb !important;
+  text-shadow: none !important;
+}
+
+html[data-ufs-theme-system="sigaa"] #container:has(#colDir) #cabecalho {
+  height: 26px !important;
+  min-height: 26px !important;
+}
+
+html[data-ufs-theme-system="sigaa"] #container:has(#colDir) #cabecalho #identificacao {
+  box-sizing: border-box !important;
+  height: 26px !important;
+  min-height: 26px !important;
+  background-color: #263d66 !important;
+  background-image: none !important;
+}
+
+html[data-ufs-theme-system="sigaa"] #container:has(#colDir) #colEsq #logo,
+html[data-ufs-theme-system="sigaa"] #container:has(#colDir) #colEsq #logo p,
+html[data-ufs-theme-system="sigaa"] #container:has(#colDir) #colEsq #logo p span {
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+html[data-ufs-theme-system="sigaa"] #container:has(#colDir) #colEsq #logo {
+  height: 83px !important;
+  min-height: 83px !important;
+  margin: 0 0 8px !important;
+  padding: 0 !important;
+}
+
+html[data-ufs-theme-system="sigaa"] #container:has(#colDir) #colEsq #logo p,
+html[data-ufs-theme-system="sigaa"] #container:has(#colDir) #colEsq #logo p span {
+  display: block !important;
+  height: 83px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+html[data-ufs-theme-system="sigaa"] #container:has(#colDir) #colEsq #logo a {
+  display: inline-block !important;
+  height: 83px !important;
+  line-height: 0 !important;
+}
+
+html[data-ufs-theme-system="sigaa"] #container:has(#colDir) #colEsq #logo img {
+  display: block !important;
+  margin: 0 auto !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}

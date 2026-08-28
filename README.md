@@ -10,6 +10,10 @@ Extensão para Google Chrome que aplica um tema escuro aos sistemas instituciona
 - SEI
 - SIGs: SIGAA, SIPAC, SIGRH, SIGADMIN, SIGEleição, RESUNWEB e Caixa Postal
 
+## Instalação pela Chrome Web Store
+
+Instale a versão publicada pela [Chrome Web Store](https://chromewebstore.google.com/detail/ufs-dark-theme/ghcbnpbjmmpfijhbalgbbnjgpgkhhpgi).
+
 ## Instalação local
 
 1. Baixe ou clone este repositório.
