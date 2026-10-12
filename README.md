@@ -5,6 +5,7 @@ Extensão para Google Chrome que aplica um tema escuro aos sistemas instituciona
 ## Sistemas compatíveis
 
 - GLPI
+- Redmine (incluindo o quadro ágil)
 - Polare
 - SSO
 - SEI

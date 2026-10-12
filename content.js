@@ -5,6 +5,8 @@ const SISTEMAS_UFS_HOSTS = new Set(['sistemas.ufs.br', 'www.sistemas.ufs.br']);
 const THEMES = Object.freeze({
   'glpi.ufs.br': { storageKey: 'glpi_dark', cssFile: 'styles/glpi.css' },
   'www.glpi.ufs.br': { storageKey: 'glpi_dark', cssFile: 'styles/glpi.css' },
+  'redmine.ufs.br': { storageKey: 'redmine_dark', cssFile: 'styles/redmine.css' },
+  'www.redmine.ufs.br': { storageKey: 'redmine_dark', cssFile: 'styles/redmine.css' },
   'polare.ufs.br': { storageKey: 'polare_dark', cssFile: 'styles/polare.css' },
   'www.polare.ufs.br': { storageKey: 'polare_dark', cssFile: 'styles/polare.css' },
   'sso.auth.ufs.br': { storageKey: 'sso_dark', cssFile: 'styles/sso.css' },
@@ -439,6 +441,62 @@ function configurePrintMode() {
   });
 }
 
+function configureRedmineBoardPanning() {
+  if (theme.storageKey !== 'redmine_dark') return;
+
+  let activePan = null;
+
+  const finishPan = () => {
+    if (!activePan) return;
+    activePan.board.classList.remove('ufs-redmine-panning');
+    try {
+      activePan.board.releasePointerCapture(activePan.pointerId);
+    } catch {
+    }
+    activePan = null;
+  };
+
+  document.addEventListener('pointerdown', (event) => {
+    if (!desiredEnabled || event.button !== 0 || event.pointerType !== 'mouse') return;
+
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+
+    const board = target.closest('.agile-board.autoscroll');
+    if (!board || board.scrollWidth <= board.clientWidth + 1) return;
+    if (target.closest('.issue-card, a, button, input, select, textarea, label, [contenteditable], .add-issue')) return;
+
+    const onColumn = target.closest('table.issues-board th, td.issue-status-col');
+    if (!onColumn && target !== board && !target.classList.contains('container-fixed')) return;
+
+    activePan = {
+      board,
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startScrollLeft: board.scrollLeft,
+    };
+    board.classList.add('ufs-redmine-panning');
+    board.setPointerCapture(event.pointerId);
+    event.preventDefault();
+  });
+
+  document.addEventListener('pointermove', (event) => {
+    if (!activePan || event.pointerId !== activePan.pointerId) return;
+    if (!desiredEnabled) {
+      finishPan();
+      return;
+    }
+    activePan.board.scrollLeft = activePan.startScrollLeft - (event.clientX - activePan.startX);
+    event.preventDefault();
+  });
+
+  document.addEventListener('pointerup', (event) => {
+    if (activePan && event.pointerId === activePan.pointerId) finishPan();
+  });
+  document.addEventListener('pointercancel', finishPan);
+  window.addEventListener('blur', finishPan);
+}
+
 function decodeSeiTooltipText(value) {
   return value
     .replace(/\\(['"\\])/g, '$1')
@@ -545,6 +603,7 @@ if (theme) {
   }
 
   configurePrintMode();
+  configureRedmineBoardPanning();
   configureSeiProcessSubjects();
 
   const storageKeys = [theme.storageKey];

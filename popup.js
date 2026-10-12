@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
   const glpiToggle = document.getElementById('glpi_toggle');
+  const redmineToggle = document.getElementById('redmine_toggle');
   const polareToggle = document.getElementById('polare_toggle');
   const ssoToggle = document.getElementById('sso_toggle');
   const seiToggle = document.getElementById('sei_toggle');
   const sigsToggle = document.getElementById('sigs_toggle');
-  chrome.storage.sync.get(['glpi_dark', 'polare_dark', 'sso_dark', 'sei_dark', 'sigs_dark', 'sigrh_dark'], (res) => {
+  chrome.storage.sync.get(['glpi_dark', 'redmine_dark', 'polare_dark', 'sso_dark', 'sei_dark', 'sigs_dark', 'sigrh_dark'], (res) => {
     glpiToggle.checked = res.glpi_dark ?? true;
+    redmineToggle.checked = res.redmine_dark ?? true;
     polareToggle.checked = res.polare_dark ?? true;
     ssoToggle.checked = res.sso_dark ?? true;
     seiToggle.checked = res.sei_dark ?? true;
@@ -22,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   };
   handleToggle('glpi_toggle', 'glpi_dark');
+  handleToggle('redmine_toggle', 'redmine_dark');
   handleToggle('polare_toggle', 'polare_dark');
   handleToggle('sso_toggle', 'sso_dark');
   handleToggle('sei_toggle', 'sei_dark');

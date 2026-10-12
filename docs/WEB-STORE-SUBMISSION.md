@@ -2,13 +2,13 @@
 
 ## Propósito único
 
-Aplicar um tema escuro aos sistemas institucionais GLPI, Polare, Portal de
+Aplicar um tema escuro aos sistemas institucionais GLPI, Redmine, Polare, Portal de
 Autenticação (SSO), SEI e à família SIGs da Universidade Federal de Sergipe,
 melhorando o conforto visual sem alterar as funcionalidades desses sistemas.
 
 ## Descrição curta
 
-Tema escuro para GLPI, Polare, SSO, SEI, SIGAA, SIPAC, SIGRH, SIGADMIN, SIGEleição,
+Tema escuro para GLPI, Redmine, Polare, SSO, SEI, SIGAA, SIPAC, SIGRH, SIGADMIN, SIGEleição,
 RESUNWEB e Caixa Postal da UFS.
 
 ## Descrição detalhada sugerida
@@ -16,9 +16,9 @@ RESUNWEB e Caixa Postal da UFS.
 O UFS Dark Theme adapta a aparência dos sistemas institucionais da Universidade
 Federal de Sergipe para uma paleta escura e de maior conforto visual.
 
-A extensão atua exclusivamente no GLPI, Polare, Portal de Autenticação (SSO), SEI e
+A extensão atua exclusivamente no GLPI, Redmine, Polare, Portal de Autenticação (SSO), SEI e
 na família SIGs da UFS: SIGAA, SIPAC, SIGRH, SIGADMIN, SIGEleição, RESUNWEB e
-Caixa Postal. GLPI, Polare, SSO e SEI possuem controles próprios; os SIGs
+Caixa Postal. GLPI, Redmine, Polare, SSO e SEI possuem controles próprios; os SIGs
 compartilham um único controle. O tema preserva a estrutura e as
 funcionalidades originais das páginas e não adiciona publicidade.
 
@@ -27,8 +27,8 @@ das páginas, credenciais, formulários ou histórico de navegação.
 
 ## Justificativa da permissão `storage`
 
-A permissão `storage` é utilizada somente para salvar cinco preferências de
-ativação do tema (`glpi_dark`, `polare_dark`, `sso_dark`, `sei_dark` e `sigs_dark`). Esses
+A permissão `storage` é utilizada somente para salvar seis preferências de
+ativação do tema (`glpi_dark`, `redmine_dark`, `polare_dark`, `sso_dark`, `sei_dark` e `sigs_dark`). Esses
 valores são booleanos e permitem manter a escolha do usuário entre sessões e,
 quando o Chrome Sync estiver ativo, entre seus próprios dispositivos. O
 desenvolvedor não recebe nem acessa essas preferências.

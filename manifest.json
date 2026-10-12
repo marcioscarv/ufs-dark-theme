@@ -2,11 +2,13 @@
   "manifest_version": 3,
   "name": "UFS Dark Theme",
   "description": "Aplica um tema escuro aos principais sistemas institucionais da Universidade Federal de Sergipe.",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "permissions": ["storage"],
   "host_permissions": [
     "*://glpi.ufs.br/*",
     "*://www.glpi.ufs.br/*",
+    "*://redmine.ufs.br/*",
+    "*://www.redmine.ufs.br/*",
     "*://polare.ufs.br/*",
     "*://www.polare.ufs.br/*",
     "*://sso.auth.ufs.br/*",
@@ -35,6 +37,8 @@
       "matches": [
         "*://glpi.ufs.br/*",
         "*://www.glpi.ufs.br/*",
+        "*://redmine.ufs.br/*",
+        "*://www.redmine.ufs.br/*",
         "*://polare.ufs.br/*",
         "*://www.polare.ufs.br/*",
         "*://sso.auth.ufs.br/*",
@@ -62,6 +66,8 @@
       "matches": [
         "*://glpi.ufs.br/*",
         "*://www.glpi.ufs.br/*",
+        "*://redmine.ufs.br/*",
+        "*://www.redmine.ufs.br/*",
         "*://polare.ufs.br/*",
         "*://www.polare.ufs.br/*",
         "*://sso.auth.ufs.br/*",
@@ -90,6 +96,7 @@
     {
       "resources": [
         "styles/glpi.css",
+        "styles/redmine.css",
         "styles/polare.css",
         "styles/sso.css",
         "styles/sei.css",
@@ -104,6 +111,8 @@
       "matches": [
         "*://glpi.ufs.br/*",
         "*://www.glpi.ufs.br/*",
+        "*://redmine.ufs.br/*",
+        "*://www.redmine.ufs.br/*",
         "*://polare.ufs.br/*",
         "*://www.polare.ufs.br/*",
         "*://sso.auth.ufs.br/*",

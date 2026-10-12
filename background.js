@@ -1,6 +1,8 @@
 const THEME_HOSTS = new Set([
   'glpi.ufs.br',
   'www.glpi.ufs.br',
+  'redmine.ufs.br',
+  'www.redmine.ufs.br',
   'polare.ufs.br',
   'www.polare.ufs.br',
   'sso.auth.ufs.br',

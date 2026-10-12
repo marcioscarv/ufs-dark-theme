@@ -1,11 +1,11 @@
 # Política de Privacidade — UFS Dark Theme
 
-Última atualização: 20 de agosto de 2026.
+Última atualização: 11 de outubro de 2026.
 
 ## Finalidade
 
 O UFS Dark Theme tem como única finalidade aplicar um tema escuro aos sistemas
-institucionais GLPI, Polare, Portal de Autenticação (SSO), SEI e a família SIGs da
+institucionais GLPI, Redmine, Polare, Portal de Autenticação (SSO), SEI e a família SIGs da
 Universidade Federal de Sergipe, incluindo SIGAA, SIPAC, SIGRH, SIGADMIN,
 SIGEleição, RESUNWEB e Caixa Postal.
 
@@ -17,7 +17,7 @@ comunicações, localização ou informações financeiras.
 
 ## Preferências armazenadas
 
-A extensão armazena somente cinco valores booleanos que indicam se o tema está
+A extensão armazena somente seis valores booleanos que indicam se o tema está
 ativado para cada sistema suportado. Essas preferências são mantidas pelo
 `chrome.storage.sync` e podem ser sincronizadas pelo próprio Chrome entre os
 dispositivos do usuário. O desenvolvedor não recebe nem possui acesso a esses
@@ -48,7 +48,7 @@ e hospedados nos sistemas suportados.
 
 ## Controle do usuário
 
-O usuário pode ativar ou desativar GLPI, Polare, SSO, SEI e a família SIGs pelo menu
+O usuário pode ativar ou desativar GLPI, Redmine, Polare, SSO, SEI e a família SIGs pelo menu
 da extensão. A remoção da extensão elimina seu acesso às páginas; as
 preferências sincronizadas são administradas pelo próprio Chrome e pela conta
 do usuário.
