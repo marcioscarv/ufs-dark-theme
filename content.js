@@ -147,7 +147,11 @@ function resolveTheme() {
   };
 }
 
-const theme = resolveTheme();
+const isSeiAttachment = ['sei.ufs.br', 'www.sei.ufs.br'].includes(window.location.hostname)
+  && new URLSearchParams(window.location.search).get('acao') === 'documento_download_anexo';
+const theme = document.contentType === 'application/pdf' || isSeiAttachment
+  ? undefined
+  : resolveTheme();
 
 let activationGeneration = 0;
 let desiredEnabled = false;

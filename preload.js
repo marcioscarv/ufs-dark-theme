@@ -1,4 +1,8 @@
 (() => {
+  const isSeiAttachment = ['sei.ufs.br', 'www.sei.ufs.br'].includes(window.location.hostname)
+    && new URLSearchParams(window.location.search).get('acao') === 'documento_download_anexo';
+  if (document.contentType === 'application/pdf' || isSeiAttachment) return;
+
   const style = document.createElement('style');
   style.id = 'ufs-dark-theme-fallback';
   style.media = 'screen';

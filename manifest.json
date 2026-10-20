@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "UFS Dark Theme",
   "description": "Aplica um tema escuro aos principais sistemas institucionais da Universidade Federal de Sergipe.",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "permissions": ["storage"],
   "host_permissions": [
     "*://glpi.ufs.br/*",
