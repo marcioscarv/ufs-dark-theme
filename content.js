@@ -156,6 +156,7 @@ const theme = document.contentType === 'application/pdf' || isSeiAttachment
 let activationGeneration = 0;
 let desiredEnabled = false;
 let dynamicThemeActive = false;
+let syncRedmineBoardStickyHeader = () => {};
 let editorSyncQueued = false;
 let themeCSSPromise;
 let restoreThemeAfterPrint = false;
@@ -405,6 +406,7 @@ function disableDynamicTheme() {
 function setThemeEnabled(isEnabled) {
   desiredEnabled = isEnabled;
   const generation = ++activationGeneration;
+  syncRedmineBoardStickyHeader();
 
   if (!isEnabled) {
     disableDynamicTheme();
@@ -499,6 +501,40 @@ function configureRedmineBoardPanning() {
   });
   document.addEventListener('pointercancel', finishPan);
   window.addEventListener('blur', finishPan);
+}
+
+function configureRedmineBoardStickyHeader() {
+  if (theme.storageKey !== 'redmine_dark') return;
+
+  const sync = () => {
+    document.querySelectorAll('.agile-board.autoscroll').forEach((board) => {
+      const header = board.querySelector('table.issues-board.sticky');
+      if (!header) return;
+
+      if (!desiredEnabled) {
+        header.style.removeProperty('transform');
+        header.style.removeProperty('clip-path');
+        header.classList.remove('ufs-redmine-header-synced');
+        return;
+      }
+
+      const scrollLeft = board.scrollLeft;
+      const table = board.querySelector('table.issues-board:not(.sticky)');
+      const tableWidth = table?.offsetWidth || header.offsetWidth;
+      const hiddenRight = Math.max(0, tableWidth - scrollLeft - board.clientWidth);
+      header.style.transform = `translateX(${-scrollLeft}px)`;
+      header.style.clipPath = `inset(0 ${hiddenRight}px 0 ${scrollLeft}px)`;
+      header.classList.add('ufs-redmine-header-synced');
+    });
+  };
+
+  syncRedmineBoardStickyHeader = sync;
+
+  document.addEventListener('scroll', sync, true);
+  window.addEventListener('resize', sync);
+  window.addEventListener('load', sync);
+  new MutationObserver(sync).observe(document.body, { childList: true, subtree: true });
+  sync();
 }
 
 function decodeSeiTooltipText(value) {
@@ -608,6 +644,11 @@ if (theme) {
 
   configurePrintMode();
   configureRedmineBoardPanning();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', configureRedmineBoardStickyHeader, { once: true });
+  } else {
+    configureRedmineBoardStickyHeader();
+  }
   configureSeiProcessSubjects();
 
   const storageKeys = [theme.storageKey];

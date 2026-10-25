@@ -103,6 +103,8 @@ a:focus {
 }
 #sidebar {
   box-sizing: border-box;
+  position: relative;
+  z-index: 101;
   background: var(--ufs-rd-shell) !important;
   color: var(--ufs-rd-soft) !important;
   border-left: 1px solid var(--ufs-rd-border) !important;
@@ -336,6 +338,9 @@ div.agile-board.autoscroll {
   background: var(--ufs-rd-bg) !important;
   scrollbar-color: var(--ufs-rd-border) var(--ufs-rd-bg);
 }
+.agile-board table.issues-board.sticky:not(.ufs-redmine-header-synced) {
+  visibility: hidden !important;
+}
 .agile-board table.issues-board thead th,
 .agile-board table.issues-board td.issue-status-col {
   cursor: grab !important;
@@ -368,10 +373,10 @@ table.list.issues-board td.issue-status-col {
 table.list.issues-board thead th {
   height: 42px !important;
   padding: 9px 12px !important;
-  background: var(--ufs-rd-column) !important;
-  color: var(--ufs-rd-soft) !important;
-  border: 1px solid var(--ufs-rd-border) !important;
-  border-bottom: 2px solid #4b83cf !important;
+  background: var(--ufs-rd-header, #31506f) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.36) !important;
   border-radius: 7px 7px 0 0 !important;
   font-size: 12px !important;
   font-weight: 700 !important;
@@ -382,27 +387,39 @@ table.list.issues-board thead th {
 }
 table.list.issues-board thead th .count {
   display: inline-block;
-  margin-left: 2px;
-  padding: 1px 7px;
-  background: var(--ufs-rd-raised) !important;
-  color: var(--ufs-rd-text) !important;
+  margin: 0 3px;
+  padding: 1px 8px;
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.24) !important;
   border-radius: 99px;
+  font-weight: 800 !important;
+  font-variant-numeric: tabular-nums;
 }
-table.list.issues-board thead th[data-column-id="1"] {
-  border-bottom-color: #8094ae !important;
-}
-table.list.issues-board thead th[data-column-id="7"] {
-  border-bottom-color: #4b9bf0 !important;
-}
-table.list.issues-board thead th[data-column-id="9"] {
-  border-bottom-color: #e2747c !important;
-}
-table.list.issues-board thead th[data-column-id="56"] {
-  border-bottom-color: #b093e9 !important;
-}
-table.list.issues-board thead th[data-column-id="3"] {
-  border-bottom-color: #69b48f !important;
-}
+table.list.issues-board thead th[data-column-id="1"] { --ufs-rd-header: #365a7c; }
+table.list.issues-board thead th[data-column-id="2"] { --ufs-rd-header: #365d87; }
+table.list.issues-board thead th[data-column-id="7"] { --ufs-rd-header: #236684; }
+table.list.issues-board thead th[data-column-id="14"] { --ufs-rd-header: #665485; }
+table.list.issues-board thead th[data-column-id="125"] { --ufs-rd-header: #765277; }
+table.list.issues-board thead th[data-column-id="128"] { --ufs-rd-header: #765b69; }
+table.list.issues-board thead th[data-column-id="55"] { --ufs-rd-header: #505d91; }
+table.list.issues-board thead th[data-column-id="127"] { --ufs-rd-header: #77516d; }
+table.list.issues-board thead th[data-column-id="129"] { --ufs-rd-header: #6e5a78; }
+table.list.issues-board thead th[data-column-id="126"] { --ufs-rd-header: #6b5b83; }
+table.list.issues-board thead th[data-column-id="57"] { --ufs-rd-header: #805b4d; }
+table.list.issues-board thead th[data-column-id="6"] { --ufs-rd-header: #655b65; }
+table.list.issues-board thead th[data-column-id="9"] { --ufs-rd-header: #88505a; }
+table.list.issues-board thead th[data-column-id="130"] { --ufs-rd-header: #824b67; }
+table.list.issues-board thead th[data-column-id="56"] { --ufs-rd-header: #65558a; }
+table.list.issues-board thead th[data-column-id="10"] { --ufs-rd-header: #28677b; }
+table.list.issues-board thead th[data-column-id="11"] { --ufs-rd-header: #3a6682; }
+table.list.issues-board thead th[data-column-id="12"] { --ufs-rd-header: #2f716b; }
+table.list.issues-board thead th[data-column-id="54"] { --ufs-rd-header: #555f85; }
+table.list.issues-board thead th[data-column-id="4"] { --ufs-rd-header: #78604e; }
+table.list.issues-board thead th[data-column-id="90"] { --ufs-rd-header: #347466; }
+table.list.issues-board thead th[data-column-id="3"] { --ufs-rd-header: #326f5b; }
+table.list.issues-board thead th[data-column-id="53"] { --ufs-rd-header: #497146; }
+table.list.issues-board thead th[data-column-id="5"] { --ufs-rd-header: #536d53; }
 table.list.issues-board tbody tr,
 table.list.issues-board tbody tr:hover,
 table.list.issues-board tbody tr:hover td {
