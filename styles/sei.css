@@ -343,7 +343,6 @@ a.processoVisualizado:focus::before {
   display: none !important;
 }
 
-#divRecebidos,
 #divRecebidosAreaTabela,
 #tblProcessosRecebidos {
   width: 100% !important;
